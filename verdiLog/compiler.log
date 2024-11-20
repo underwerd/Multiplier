@@ -1,0 +1,16 @@
+*design* DebussyLib (btIdent Verdi_O-2018.09-SP2)
+Command arguments:
+    +define+verilog
+    -f filelist.f
+        ./src/BoothEndecode.v
+        ./src/CLA32.v
+        ./src/Multiplier_top.v
+        ./src/PP_top.v
+        ./src/PPUnit.v
+        ./src/WallaceTree_top.v
+        ./sim/tb_Multiplier.sv
+
+Highest level modules:
+tb_Multiplier
+
+Total	0 error(s),   0 warning(s)

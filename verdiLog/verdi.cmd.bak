@@ -1,0 +1,70 @@
+debImport "-f" "filelist.f"
+debLoadSimResult /home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb
+wvCreateWindow
+wvRestoreSignal -win $_nWave2 "/home/ICer/ic_prjs/multiplier/signal.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
+wvSelectGroup -win $_nWave2 {G5}
+wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollUp -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "G4" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 5 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G4" 4 )} 
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 1
+wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 3 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 4 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 5 )} 
+wvScrollDown -win $_nWave2 1
+wvScrollDown -win $_nWave2 0
+wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
+wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
+wvScrollDown -win $_nWave2 0
+wvScrollDown -win $_nWave2 0
+debExit

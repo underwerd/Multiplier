@@ -1,0 +1,110 @@
+Magic 271485
+Revision Verdi_O-2018.09-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 27 1920 452 204 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 0.000000 50019.080093
+cursor 10000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 3
+; marker line index
+markerPos 16
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb"
+addSignal -h 15 /tb_Multiplier/uut/u_WallaceTree_top/PP0[31:0]
+addSignal -h 15 -holdScope PP1[31:0]
+addSignal -h 15 -holdScope PP2[31:0]
+addSignal -h 15 -holdScope PP3[31:0]
+addGroup "G2"
+addSignal -h 15 -UNSIGNED -HEX /tb_Multiplier/uut/u_WallaceTree_top/u_WallaceTree_0/in_0[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope in_1[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope in_2[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope in_3[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope out_0[17:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope out_1[17:0]
+addSignal -h 15 -holdScope Cout
+addSignal -h 15 /tb_Multiplier/uut/u_WallaceTree_top/u_WallaceTree_0/u_HalfAdder_1/X1
+addSignal -h 15 -holdScope X2
+addSignal -h 15 -holdScope Sum
+addSignal -h 15 -holdScope Carry
+addGroup "G3"
+addSignal -h 15 /tb_Multiplier/uut/u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[1]/u_CSA42/X1
+addSignal -h 15 -holdScope X2
+addSignal -h 15 -holdScope X3
+addSignal -h 15 -holdScope X4
+addSignal -h 15 -holdScope Cin
+addSignal -h 15 -holdScope Cout
+addSignal -h 15 -holdScope Sum
+addSignal -h 15 -holdScope Carry
+addGroup "G4"
+addSignal -h 15 /tb_Multiplier/uut/u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[7]/u_CSA42/X1
+addSignal -h 15 -holdScope X2
+addSignal -h 15 -holdScope X3
+addSignal -h 15 -holdScope X4
+addSignal -h 15 -holdScope Cin
+addSignal -h 15 -holdScope Cout
+addSignal -h 15 -holdScope Sum
+addSignal -h 15 -holdScope Carry
+addGroup "G5"
+addSignal -h 15 /tb_Multiplier/uut/u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[13]/u_CSA42/X1
+addSignal -h 15 -holdScope X2
+addSignal -h 15 -holdScope X3
+addSignal -h 15 -holdScope X4
+addSignal -h 15 -holdScope Cin
+addSignal -h 15 -holdScope Cout
+addSignal -h 15 -holdScope Sum
+addSignal -h 15 -holdScope Carry
+addGroup "G6"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/tb_Multiplier"
+
+SCOPE_LIST_BEGIN
+"/tb_Multiplier"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+
