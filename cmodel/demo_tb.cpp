@@ -6,10 +6,10 @@
 #include <bitset>
 #include <fstream>
 #include <string>
+#include <iomanip>
 
 #define PLUS //开启表示采用plus设计方案，可以让减少加法器的个数，每一个product只有16bit，不需要17bit
 #define INV //开启表示采用优化设计过的INV模型
-// #define RANDOM
 
 uint32_t 
 getBitsFromRange(uint32_t num, int a, int b)
@@ -46,12 +46,12 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
     int lowBit = getBitsFromRange(MultiplierBits, 0, 0);
     //
     std::bitset<16> binary(MultiplierBits);  // 将 num 转换为 16 位二进制
-    std::cout << "Binary representation: " << binary << std::endl;
+    // std::cout << "Binary representation: " << binary << std::endl;
     int decodeNum = -2 * highBit + midBit + lowBit;
-    std::cout<<"highBit:"<<highBit<<std::endl;
-    std::cout<<"midBit:"<<midBit<<std::endl;
-    std::cout<<"lowBit:"<<lowBit<<std::endl;
-    std::cout<<"decodeNum:"<<decodeNum<<std::endl;
+    // std::cout<<"highBit:"<<highBit<<std::endl;
+    // std::cout<<"midBit:"<<midBit<<std::endl;
+    // std::cout<<"lowBit:"<<lowBit<<std::endl;
+    // std::cout<<"decodeNum:"<<decodeNum<<std::endl;
     //
 
     switch (decodeNum)
@@ -111,17 +111,6 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
     return selection;
 }
 
-uint32_t
-BoothDecode_plus(int32_t MultiplierBits,uint16_t Multiplicand)
-{
-    uint32_t selection = 0;
-    uint32_t tmp = 0;
-    tmp = BoothDecode(MultiplierBits,Multiplicand);
-    selection = getBitsFromRange(tmp,0,15);
-    return selection;
-}
-
-
 
 int
 calculateE(uint32_t PP,uint32_t MultiplierBits)
@@ -149,42 +138,19 @@ calculateE(uint32_t PP,uint32_t MultiplierBits)
     return E;
 }
 
-void
-fullAdder(uint32_t input[],uint32_t output[])
-{
-    
-}
-
-void
-walliceTree(uint32_t input_PP[],uint32_t output[])
-{
-    int shiftNum=0;
-
-
-}
-
-uint32_t
-fullAdder32(uint32_t sum,uint32_t carry)
-{
-    uint32_t result = 0;
-
-    return result;
-}
-
-
 
 
 uint32_t
-multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
+multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand,uint32_t output_PP[])
 {
     int counter = 8; //8 times decode
     uint32_t result = 0;
     std::array<uint32_t, 8> PP;
     //debug
     std::bitset<16> binary1(Multiplier);  // 将 num 转换为 16 位二进制
-    std::cout << "Binary Multiplier: " << binary1 << std::endl;
+    // std::cout << "Binary Multiplier: " << binary1 << std::endl;
     std::bitset<16> binary2(Multiplicand);  // 将 num 转换为 16 位二进制
-    std::cout << "Binary Multiplicand: " << binary2 << std::endl;
+    // std::cout << "Binary Multiplicand: " << binary2 << std::endl;
 
     //decode
     for (int i = 0; i < counter; i++) //8 times
@@ -237,6 +203,7 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
     std::cout<<"-----------------------PP-----------------------"<<std::endl;
     for (int i = 0; i < counter; i++)
     {
+        output_PP[i] = PP[i];
         std::bitset<32> binPPi(PP[i]);  // 将 num 转换为 16 位二进制
         std::cout << "Binary PP["<<i<<"]: " << binPPi << std::endl;
     }
@@ -244,88 +211,53 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
     return result;
 }
 
-uint32_t multiplicationUnit_r(uint16_t Multiplier,uint16_t Multiplicand){
-    int32_t result = 0;
-    result = static_cast<int16_t>(Multiplier) * static_cast<int16_t>(Multiplicand);
-    return static_cast<uint32_t>(result);
-}
+std::string input_file_dir = "inputs.txt";
+std::string output_PP_file_dir = "output_PP.txt";
+std::string output_file_dir = "outputs.txt";
 
-
-int main(int argc, char* argv[])
+int main()
 {
-    std::random_device rd;  // 使用随机设备种子
-    std::mt19937 gen(rd()); // 使用 Mersenne Twister 算法生成随机数
-    // 定义范围为 0 到 65535 的分布
-    std::uniform_int_distribution<uint16_t> dis(0, 65535);
-    // 生成随机数
-    int MAX_NUM = 10000;
-
-    // 如果用户传入了命令行参数
-    if (argc == 2) {
-        // 将传入的参数转换为整数
-        MAX_NUM = std::atoi(argv[1]);
+    std::ifstream infile(input_file_dir);
+    if(!infile.is_open()){
+        std::cerr << "Error: Cannot open file "<< input_file_dir <<"!"<<std::endl;
+        return 1;
     }
 
-    std::ofstream outFile("result.txt");
-
-    for (size_t i = 0; i < MAX_NUM; i++)
+    std::vector<std::pair<uint16_t,uint16_t>>test_case;
+    uint16_t input_a,input_b;
+    while (infile>>std::hex>>input_a>>input_b)
     {
-#ifdef RANDOM
-        uint16_t random_number1 = dis(gen);
-        uint16_t random_number2 = dis(gen);
-#else
-        uint16_t random_number1 = -8306 + 65536;
-        uint16_t random_number2 = 25244;
-#endif
-        std::cout<<"-----------------------start-----------------------"<<std::endl;
-        std::cout<<"i="<<i<<std::endl;
-
-        uint32_t result = multiplicationUnit(random_number1,random_number2);
-        uint32_t result_r = multiplicationUnit_r(random_number1,random_number2);
-
-        int16_t ran_num1 = static_cast<int16_t>(random_number1);
-        int16_t ran_num2 = static_cast<int16_t>(random_number2);
-        std::cout<<"-----------------------end-----------------------"<<std::endl;
-        printf("random_number1=%d,random_number2=%d\n", static_cast<int>(ran_num1),static_cast<int>(ran_num2));
-        printf("result=%d\n",static_cast<int>(result));
-        printf("result_r=%d\n",static_cast<int>(result_r));
-        
-
-        //compare
-        if (result!=result_r)
-        {
-            outFile << "fail" << std::endl;
-            outFile << "MAX_NUM: "<<MAX_NUM<<std::endl; 
-            outFile << "i="<<i<<std::endl;
-            outFile << "result="<<static_cast<int>(result)<<std::endl;
-            outFile << "result_r="<<static_cast<int>(result_r)<<std::endl;
-            outFile.close();
-            return 0;
-        }
-        
+        test_case.emplace_back(input_a,input_b);
     }
-    outFile << "pass" << std::endl;
-    outFile << "MAX_NUM: "<<MAX_NUM<<std::endl;
-    outFile.close();
+    
+    infile.close();
+
+
+    // 打开输出文件
+    std::ofstream outfile(output_file_dir);
+    std::ofstream outPPfile(output_PP_file_dir);
+
+    if (!outfile.is_open() || !outPPfile.is_open()) {
+     std::cerr << "Error: Cannot open output files!" << std::endl;
+     return 1;
+    }
+
+    std::cout<<"finished read input data!"<<std::endl;
+    uint32_t output_PP[8];
+    for(const auto& [input_a,input_b] : test_case){
+        uint32_t output = multiplicationUnit(input_a,input_b,output_PP);
+        // 写入 outputs.txt
+        outfile << std::hex << std::setfill('0') << std::setw(8) << output << std::endl;
+        // 写入 output_PP.txt
+        for (int i = 0; i < 8; ++i) {
+            outPPfile << std::hex << std::setfill('0') << std::setw(8) << output_PP[i];
+            if (i < 7) outPPfile << " "; // 每行部分乘积用空格分隔
+        }
+        outPPfile << std::endl; // 换行表示下一组部分乘积
+
+    }
+    outfile.close();
+    outPPfile.close();
 
     return 0;
 }
-//                _0110001010011100
-//               0_1100010100111000
-//0000000000000001_0011101011001000
-//0000000000010000_0000000000000000
-//0000000001000110_0010100111000000
-//0000000101001110_1011001000000000
-//0000010000000000_0000000000000000
-//0001000000000000_0000000000000000
-//0100110001010011_1000000000000000
-//0110011101011001_0000000000000000
-
-
-//0000000000000111_0011101011001000
-
-
-// Binary PP[0]: 00000000000000110011101011001000
-// Binary PP[1]: 00000000000011000000000000000000
-// Binary PP[2]: 00000000001101100010100111000000
-// Binary PP[3]: 00000000100011101011001000000000
