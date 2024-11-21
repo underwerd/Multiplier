@@ -9,7 +9,7 @@ vcs   :
 		|  tee  vcs.log 
 #-------------------------------------------------------------------------------------------------------
 verdi  :
-	verdi -f filelist.f -ssf tb_Multiplier.fsdb &
+	verdi -f filelist.f -ssf tb_Multiplier_dft.fsdb &
 #-------------------------------------------------------------------------------------------------------
 clean  :
 	 rm  -rf  *~  core  csrc  simv*  vc_hdrs.h  ucli.key  urg* *.log  novas.* *.fsdb* verdiLog  64* DVEfiles *.vpd

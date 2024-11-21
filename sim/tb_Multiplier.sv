@@ -1,12 +1,15 @@
 // `include "../src/Multiplier_top.v"
 
 // Testbench 模块，用于验证 signed_multiplier
+
+//`define DEBUG_PP
+
 module tb_Multiplier();
 
     // 定义参数和信号
-    parameter INPUTS_FILE = "../cmodel/inputs.txt";
-    parameter OUTPUTS_FILE = "../cmodel/outputs.txt";
-    parameter OUTPUT_PP_FILE = "../cmodel/output_PP.txt";
+    parameter INPUTS_FILE = "/home/ICer/ic_prjs/multiplier/cmodel/inputs.txt";
+    parameter OUTPUTS_FILE = "/home/ICer/ic_prjs/multiplier/cmodel/outputs.txt";
+    parameter OUTPUT_PP_FILE = "/home/ICer/ic_prjs/multiplier/cmodel/output_PP.txt";
 
     int infile_inputs, infile_outputs, infile_output_pp; // 文件句柄
     int a, b;              // 输入值 (uint16_t)
@@ -28,7 +31,7 @@ module tb_Multiplier();
     assign TreeResult = TreeSum + TreeCarry;
     
     // 实例化 16-bit 有符号乘法器
-    Multiplier_top_dtf uut (
+    Multiplier_top_dft uut (
         .Multiplicant(A),
         .Multiplier(B),
         .result(Product),
@@ -67,16 +70,16 @@ module tb_Multiplier();
         // 循环读取文件内容
         while (!$feof(infile_inputs)) begin
             // 从 inputs.txt 读取 a 和 b
-            void($fscanf(infile_inputs, "%h %h\n", a, b));
+            $fscanf(infile_inputs, "%h %h\n", a, b);
             A = a;
             B = b;
 
             // 从 outputs.txt 读取 golden_output
-            void($fscanf(infile_outputs, "%h\n", golden_output));
+            $fscanf(infile_outputs, "%h\n", golden_output);
 
             // 从 output_PP.txt 读取 golden_pp
             for (int i = 0; i < 8; i++) begin
-                void($fscanf(infile_output_pp, "%h", golden_pp[i]));
+                $fscanf(infile_output_pp, "%h", golden_pp[i]);
             end
 
             // 等待 1 时钟周期
@@ -85,18 +88,19 @@ module tb_Multiplier();
             // 验证结果
             if (Product !== golden_output) begin
                 $display("Mismatch in Product: Expected %h, Got %h", golden_output, Product);
+                $display("A %h,B %h",A,B);
                 is_pass = 0;
             end else begin
-                $display("Product matched: %h", Product);
+//                $display("Product matched: %h", Product);
             end
 
             if (TreeResult !== golden_output) begin
                 $display("Mismatch in TreeResult: Expected %h, Got %h", golden_output, TreeResult);
                 is_pass = 0;
             end else begin
-                $display("TreeResult matched: %h", TreeResult);
+//                $display("TreeResult matched: %h", TreeResult);
             end
-
+`ifdef DEBUG_PP
             for (int i = 0; i < 8; i++) begin
                 if (PartialProduct[i] !== golden_pp[i]) begin
                 $display("Mismatch in PartialProduct[%0d]: Expected %h, Got %h", i, golden_pp[i], PartialProduct[i]);
@@ -105,6 +109,7 @@ module tb_Multiplier();
                 $display("PartialProduct matched");
                 end
             end
+`endif
         end
 
         if (is_pass==0) begin

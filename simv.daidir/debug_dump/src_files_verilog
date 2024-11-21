@@ -2,6 +2,7 @@
 /home/ICer/ic_prjs/multiplier/src/BoothEndecode.v
 /home/ICer/ic_prjs/multiplier/src/CLA32.v
 /home/ICer/ic_prjs/multiplier/src/Multiplier_top.v
+/home/ICer/ic_prjs/multiplier/src/Multiplier_top_dft.v
 /home/ICer/ic_prjs/multiplier/src/PPUnit.v
 /home/ICer/ic_prjs/multiplier/src/PP_top.v
 /home/ICer/ic_prjs/multiplier/src/WallaceTree_top.v

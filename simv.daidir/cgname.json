@@ -1,10 +1,4 @@
 {
-    "PPUnit": [
-        "PPUnit",
-        "u4s2z",
-        "module",
-        4
-    ],
     "std": [
         "std",
         "reYIK",
@@ -17,11 +11,17 @@
         "module",
         2
     ],
-    "WallaceTree_0000": [
-        "WallaceTree_0000",
-        "QnKgm",
+    "CLA32_0000": [
+        "CLA32_0000",
+        "WWUiq",
         "module",
-        5
+        9
+    ],
+    "PPUnit": [
+        "PPUnit",
+        "u4s2z",
+        "module",
+        4
     ],
     "CaculateE": [
         "CaculateE",
@@ -29,11 +29,35 @@
         "module",
         3
     ],
-    "CSA42": [
-        "CSA42",
-        "vjWdY",
+    "Multiplier_top": [
+        "Multiplier_top",
+        "DeBb9",
         "module",
-        6
+        10
+    ],
+    "Multiplier_top_dft": [
+        "Multiplier_top_dft",
+        "eYkgs",
+        "module",
+        11
+    ],
+    "PP_top_0000": [
+        "PP_top_0000",
+        "tskbV",
+        "module",
+        12
+    ],
+    "WallaceTree_top_0000": [
+        "WallaceTree_top_0000",
+        "ipm9F",
+        "module",
+        13
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        8
     ],
     "tb_Multiplier": [
         "tb_Multiplier",
@@ -41,10 +65,16 @@
         "module",
         7
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "CSA42": [
+        "CSA42",
+        "vjWdY",
         "module",
-        8
+        6
+    ],
+    "WallaceTree_0000": [
+        "WallaceTree_0000",
+        "QnKgm",
+        "module",
+        5
     ]
 }

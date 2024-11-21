@@ -7,7 +7,7 @@ UUM=FALSE
 KDB=FALSE
 USE_NOVAS_HOME=FALSE
 COSIM=FALSE
-TOP=tb_Multiplier 
+TOP=Multiplier_top tb_Multiplier 
 OPTION=-ssv -ssy 
 ELAB_OPTION=-ssv -ssy 
 
