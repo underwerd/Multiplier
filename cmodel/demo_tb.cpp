@@ -113,10 +113,14 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
 
 
 int
-calculateE(uint32_t PP,uint32_t MultiplierBits)
+calculateE(uint32_t PP,uint32_t MultiplierBits,uint32_t Multiplicand_signbit)
 {
     int E = 0;
     uint32_t tmpPP = PP;
+    int highBit = getBitsFromRange(MultiplierBits, 2, 2);
+    int midBit = getBitsFromRange(MultiplierBits, 1, 1);
+    int lowBit = getBitsFromRange(MultiplierBits, 0, 0);
+    int decodeNum = -2 * highBit + midBit + lowBit;
     if (MultiplierBits==0b000) //X = +0
     {
         E = 1;
@@ -134,6 +138,9 @@ calculateE(uint32_t PP,uint32_t MultiplierBits)
         {
             E = 1; //+
         }
+        if(Multiplicand_signbit)
+            if (decodeNum<0)
+                E = 1;
     }
     return E;
 }
@@ -162,7 +169,7 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand,uint32_t output_PP[
             MultiplierBits = MultiplierBits << 1; //11->110
             uint32_t tmpPP = BoothDecode(MultiplierBits,Multiplicand);
             int E = 0;
-            E = calculateE(tmpPP,MultiplierBits);
+            E = calculateE(tmpPP,MultiplierBits,getBitsFromRange(Multiplicand,15,15));
             int expansionBits = 0;
             expansionBits = E?(0b100):(0b011);
 #ifdef PLUS
@@ -175,7 +182,7 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand,uint32_t output_PP[
             uint32_t MultiplierBits = getBitsFromRange(static_cast<uint32_t>(Multiplier), 2*i - 1, 2*i + 1);//[3:1] -> [13:15]
             uint32_t tmpPP = BoothDecode(MultiplierBits,Multiplicand);
             int E = 0;
-            E = calculateE(tmpPP,MultiplierBits);
+            E = calculateE(tmpPP,MultiplierBits,getBitsFromRange(Multiplicand,15,15));
             int expansionBits = 0;
             expansionBits = E?(0b11):(0b10);
 #ifdef PLUS

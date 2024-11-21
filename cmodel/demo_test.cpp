@@ -9,7 +9,7 @@
 
 #define PLUS //开启表示采用plus设计方案，可以让减少加法器的个数，每一个product只有16bit，不需要17bit
 #define INV //开启表示采用优化设计过的INV模型
-#define RANDOM
+// #define RANDOM
 
 uint32_t 
 getBitsFromRange(uint32_t num, int a, int b)
@@ -113,10 +113,14 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
 
 
 int
-calculateE(uint32_t PP,uint32_t MultiplierBits)
+calculateE(uint32_t PP,uint32_t MultiplierBits,uint32_t Multiplicand_signbit)
 {
     int E = 0;
     uint32_t tmpPP = PP;
+    int highBit = getBitsFromRange(MultiplierBits, 2, 2);
+    int midBit = getBitsFromRange(MultiplierBits, 1, 1);
+    int lowBit = getBitsFromRange(MultiplierBits, 0, 0);
+    int decodeNum = -2 * highBit + midBit + lowBit;
     if (MultiplierBits==0b000) //X = +0
     {
         E = 1;
@@ -134,6 +138,9 @@ calculateE(uint32_t PP,uint32_t MultiplierBits)
         {
             E = 1; //+
         }
+        if(Multiplicand_signbit)
+            if (decodeNum<0)
+                E = 1;
     }
     return E;
 }
@@ -162,7 +169,9 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
             MultiplierBits = MultiplierBits << 1; //11->110
             uint32_t tmpPP = BoothDecode(MultiplierBits,Multiplicand);
             int E = 0;
-            E = calculateE(tmpPP,MultiplierBits);
+            E = calculateE(tmpPP,MultiplierBits,getBitsFromRange(Multiplicand,15,15));
+            std::bitset<32> BintmpPP(tmpPP);
+            std::cout << "tmpPP: " << BintmpPP <<" E: "<<E<< std::endl;
             int expansionBits = 0;
             expansionBits = E?(0b100):(0b011);
 #ifdef PLUS
@@ -175,7 +184,9 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
             uint32_t MultiplierBits = getBitsFromRange(static_cast<uint32_t>(Multiplier), 2*i - 1, 2*i + 1);//[3:1] -> [13:15]
             uint32_t tmpPP = BoothDecode(MultiplierBits,Multiplicand);
             int E = 0;
-            E = calculateE(tmpPP,MultiplierBits);
+            E = calculateE(tmpPP,MultiplierBits,getBitsFromRange(Multiplicand,15,15));
+            std::bitset<32> BintmpPP(tmpPP);
+            std::cout << "tmpPP: " << BintmpPP <<" E: "<<E<< std::endl;
             int expansionBits = 0;
             expansionBits = E?(0b11):(0b10);
 #ifdef PLUS
@@ -241,8 +252,8 @@ int main(int argc, char* argv[])
         uint16_t random_number1 = dis(gen);
         uint16_t random_number2 = dis(gen);
 #else
-        uint16_t random_number1 = -8306 + 65536;
-        uint16_t random_number2 = 25244;
+        uint16_t random_number1 = 0x7fff;
+        uint16_t random_number2 = 0x8000;
 #endif
         std::cout<<"-----------------------start-----------------------"<<std::endl;
         std::cout<<"i="<<i<<std::endl;
@@ -254,8 +265,12 @@ int main(int argc, char* argv[])
         int16_t ran_num2 = static_cast<int16_t>(random_number2);
         std::cout<<"-----------------------end-----------------------"<<std::endl;
         printf("random_number1=%d,random_number2=%d\n", static_cast<int>(ran_num1),static_cast<int>(ran_num2));
+        std::bitset<32> BinResult(result);
+        std::bitset<32> BinResult_r(result_r);
         printf("result=%d\n",static_cast<int>(result));
+        std::cout << "BinResult:"<< BinResult << std::endl;
         printf("result_r=%d\n",static_cast<int>(result_r));
+        std::cout << "BinResult_r:"<< BinResult_r << std::endl;
         
 
         //compare
@@ -296,3 +311,8 @@ int main(int argc, char* argv[])
 // Binary PP[1]: 00000000000011000000000000000000
 // Binary PP[2]: 00000000001101100010100111000000
 // Binary PP[3]: 00000000100011101011001000000000
+
+//1000_0000_0000_0000 (-1) 1000_0000_0000_0000  不扩充情况下
+//1_1000_0000_0000_0000 (-1) 0_1000_0000_0000_0000
+//1000_0000_0000_0000 (-2) 1_0000_0000_0000_0000
+//1_1000_0000_0000_0000 (-2) 1_0000_0000_0000_0000

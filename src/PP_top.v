@@ -73,9 +73,13 @@ endmodule
 module CaculateE (
     input [2:0]MultiplierBits,
     input PP_sign_bit,
+    input Multiplicat_sign_bit,
     output E
 );
 
+    wire H = MultiplierBits[2];
+    wire M = MultiplierBits[1];
+    wire L = MultiplierBits[0];
     reg E_tmp;
     always@(*) begin
         if (MultiplierBits==3'b000 && MultiplierBits==3'b111) begin
@@ -86,6 +90,6 @@ module CaculateE (
             E_tmp = 1'b1;
         end
     end
-    assign E = E_tmp;
+    assign E = (H&(~(M&L)))?1'b1:E_tmp;
 
 endmodule
