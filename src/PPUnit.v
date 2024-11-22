@@ -11,10 +11,10 @@ module PPUnit (
     wire  [16:0]PP_tmp;
 
     wire [16:0]Mul_Shift = (~X1&~X2&~NEG1&~NEG2)?17'b0:
-                                       (X2&NEG2)?{Multiplicant,1'b0}:
+                                       (X2|NEG2)?{Multiplicant,1'b0}:
                                        {Multiplicant[15],Multiplicant};
     wire [16:0]Inv_Mul_Shift;
-    wire PP_tmp = (NEG1&NEG2)?Inv_Mul_Shift:Mul_Shift;
+    assign PP_tmp = (NEG1|NEG2)?Inv_Mul_Shift:Mul_Shift;
     assign PP = PP_tmp;
 
     Inverse17 u_Inverse17(

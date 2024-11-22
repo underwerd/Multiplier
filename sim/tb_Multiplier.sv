@@ -128,7 +128,7 @@ module tb_Multiplier();
     end
 
     initial begin
-        $fsdbDumpfile("tb_Multiplier_dft.fsdb");
+        $fsdbDumpfile("tb_Multiplier.fsdb");
         $fsdbDumpvars;
     end
 endmodule
