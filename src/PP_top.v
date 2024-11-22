@@ -56,12 +56,13 @@ module PP_top (
             CaculateE u_Caculate(
                 .MultiplierBits(MultiplierBits[3*i+:3]),
                 .PP_sign_bit   (PP_tmp[17*(i+1)-1]),
+                .Multiplicat_sign_bit(Multiplicant[15]),
                 .E             (E[i])
             );
             if (i==0) begin:gen_pp_if
-                assign PP[32*i+:32] = {13*{1'b0},E[i],~E[i],~E[i],PP_tmp[17*i+:16]};
+                assign PP[32*i+:32] = {12*{1'b0},E[i],~E[i],~E[i],PP_tmp[17*i+:17]};
             end else begin:gen_pp_else
-                assign PP[32*i+:32] = {(14)*{1'b0},1'b1,E[i],PP_tmp[17*i+:16]}<<(2*i);
+                assign PP[32*i+:32] = {(13)*{1'b0},1'b1,E[i],PP_tmp[17*i+:17]}<<(2*i);
             end
         end
     endgenerate
@@ -80,6 +81,7 @@ module CaculateE (
     wire H = MultiplierBits[2];
     wire M = MultiplierBits[1];
     wire L = MultiplierBits[0];
+    wire sign_bit = Multiplicat_sign_bit;
     reg E_tmp;
     always@(*) begin
         if (MultiplierBits==3'b000 && MultiplierBits==3'b111) begin
@@ -90,6 +92,6 @@ module CaculateE (
             E_tmp = 1'b1;
         end
     end
-    assign E = (H&(~(M&L)))?1'b1:E_tmp;
+    assign E = (sign_bit&H&(~(M&L)))?1'b1:E_tmp;
 
 endmodule

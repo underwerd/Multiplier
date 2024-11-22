@@ -19,42 +19,39 @@ module WallaceTree_top (
     wire [31:0]PP_tmp_3;
 
     assign PP_tmp_0[3:0]   = PP0[3:0];
-    assign PP_tmp_0[31:23] = PP0[31:23];
+    assign PP_tmp_0[31:24] = PP0[31:24];
     assign PP_tmp_1[3:0]   = PP1[3:0];
-    assign PP_tmp_1[23:22] = PP3[23:22];
-    assign PP_tmp_1[31:22] = PP3[31:22];
+    assign PP_tmp_1[31:23] = PP3[31:23];
     WallaceTree u_WallaceTree_0(
-        .in_0 (PP0[21:4]),
-        .in_1 (PP1[21:4]),
-        .in_2 (PP2[21:4]),
-        .in_3 (PP3[21:4]),
-        .out_0(PP_tmp_0[21:4]),
-        .out_1(PP_tmp_1[21:4]),
-        .Cout (PP_tmp_0[22])
+        .in_0 (PP0[22:4]),
+        .in_1 (PP1[22:4]),
+        .in_2 (PP2[22:4]),
+        .in_3 (PP3[22:4]),
+        .out_0(PP_tmp_0[22:4]),
+        .out_1(PP_tmp_1[22:4]),
+        .Cout (PP_tmp_0[23])
     );
-    assign PP_tmp_2[7:0]    = PP4[7:0] ;
-    assign PP_tmp_3[7:0]    = PP5[7:0] ;
-    assign PP_tmp_2[11:8]   = PP4[11:8];
-    assign PP_tmp_3[11:8]   = PP5[11:8];
-    assign PP_tmp_3[31:30]  = PP7[31:30];
+    assign PP_tmp_2[11:0]   = PP4[11:0];
+    assign PP_tmp_3[11:0]   = PP5[11:0];
+    assign PP_tmp_3[31]  = PP7[31];
     WallaceTree u_WallaceTree_1(
-        .in_0 (PP4[29:12]),
-        .in_1 (PP5[29:12]),
-        .in_2 (PP6[29:12]),
-        .in_3 (PP7[29:12]),
-        .out_0(PP_tmp_2[29:12]),
-        .out_1(PP_tmp_3[29:12]),
-        .Cout (PP_tmp_2[30])
+        .in_0 (PP4[30:12]),
+        .in_1 (PP5[30:12]),
+        .in_2 (PP6[30:12]),
+        .in_3 (PP7[30:12]),
+        .out_0(PP_tmp_2[30:12]),
+        .out_1(PP_tmp_3[30:12]),
+        .Cout (PP_tmp_2[31])
     );
 
     WallaceTree u_WallaceTree_2(
-        .in_0 (PP_tmp_0[25:8]),
-        .in_1 (PP_tmp_1[25:8]),
-        .in_2 (PP_tmp_2[25:8]),
-        .in_3 (PP_tmp_3[25:8]),
-        .out_0(Sum[25:8]),
-        .out_1(Carry[25:8]),
-        .Cout (Carry[26])
+        .in_0 (PP_tmp_0[26:8]),
+        .in_1 (PP_tmp_1[26:8]),
+        .in_2 (PP_tmp_2[26:8]),
+        .in_3 (PP_tmp_3[26:8]),
+        .out_0(Sum[26:8]),
+        .out_1(Carry[26:8]),
+        .Cout (Carry[27])
     );
 
     wire [4:0]Sum_HalfAdder;
@@ -64,35 +61,35 @@ module WallaceTree_top (
     generate
         for (i = 0; i<5; i=i+1) begin:gen_halfAdder
             HalfAdder u_HalfAdder(
-                .X1   (PP_tmp_2[i+26]),
-                .X2   (PP_tmp_3[i+26]),
+                .X1   (PP_tmp_2[i+27]),
+                .X2   (PP_tmp_3[i+27]),
                 .Sum  (Sum_HalfAdder[i]),
                 .Carry(Carry_HalfAdder[i])
             );
         end
     endgenerate
 
-    assign Carry[31:27] =  Carry_HalfAdder;
-    assign Sum[31:26] =  {PP_tmp_3[31],Sum_HalfAdder};
+    assign Carry[31:28] =  Carry_HalfAdder[3:0];
+    assign Sum[31:27] =  Sum_HalfAdder;
     assign Carry[7:0] = PP_tmp_0[7:0];
     assign Sum[7:0] = PP_tmp_1[7:0];
 
 endmodule
 
 module WallaceTree(
-    input   [17:0]in_0 ,
-    input   [17:0]in_1 ,
-    input   [17:0]in_2 ,
-    input   [17:0]in_3 ,
-    output  [17:0]out_0,
-    output  [17:0]out_1,
+    input   [18:0]in_0 ,
+    input   [18:0]in_1 ,
+    input   [18:0]in_2 ,
+    input   [18:0]in_3 ,
+    output  [18:0]out_0,
+    output  [18:0]out_1,
     output        Cout
 );
     // wire [17:0]out_0;
     // wire [17:0]out_1;
     // wire       Cout ;
 
-    wire [14:0]Carry_tmp;
+    wire [15:0]Carry_tmp;
 
     assign out_1[0] = in_2[0];
 
@@ -116,7 +113,7 @@ module WallaceTree(
 
     genvar i;
     generate
-        for (i = 0;i<14 ; i=i+1) begin:gen_CSA42
+        for (i = 0;i<15 ; i=i+1) begin:gen_CSA42
             CSA42 u_CSA42(
                 .X1   (in_0[i+2]),
                 .X2   (in_1[i+2]),
@@ -131,17 +128,17 @@ module WallaceTree(
     endgenerate
 
     CSA32 u_CSA32_1(
-        .X1   (Carry_tmp[14]),
-        .X2   (in_2[16] ),
-        .X3   (in_3[16] ),
-        .Sum  (out_0[16]),
-        .Carry(out_1[17])
+        .X1   (Carry_tmp[15]),
+        .X2   (in_2[17] ),
+        .X3   (in_3[17] ),
+        .Sum  (out_0[17]),
+        .Carry(out_1[18])
     );
 
     HalfAdder u_HalfAdder_1(
-        .X1   (in_2[17] ),
-        .X2   (in_3[17] ),
-        .Sum  (out_0[17]),
+        .X1   (in_2[18] ),
+        .X2   (in_3[18] ),
+        .Sum  (out_0[18]),
         .Carry(Cout)
     );
 

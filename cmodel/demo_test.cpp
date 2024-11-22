@@ -7,8 +7,8 @@
 #include <fstream>
 #include <string>
 
-#define PLUS //开启表示采用plus设计方案，可以让减少加法器的个数，每一个product只有16bit，不需要17bit
-#define INV //开启表示采用优化设计过的INV模型
+//#define PLUS //开启表示采用plus设计方案，可以让减少加法器的个数，每一个product只有16bit，不需要17bit
+#define INV 17
 // #define RANDOM
 
 uint32_t 
@@ -34,6 +34,19 @@ Inverse(uint32_t input) //16bit取相反数，最高位是符号位
     uint32_t AStage4 = (getBitsFromRange(AStage3,0,7)) + ((getBitsFromRange(AStage3,0,6) | getBitsFromRange(AStage3,8,14)) << 8);
     uint32_t out = ((AStage4 << 1) ^ input);
     out = getBitsFromRange(out,0,15);
+    return out;
+}
+
+uint32_t
+Inverse17(uint32_t input) //16bit取相反数，最高位是符号位
+{
+    uint32_t A = getBitsFromRange(input,0,15); //16bit取15bit
+    uint32_t AStage1 = (getBitsFromRange(A,0,0)) + ((getBitsFromRange(A,0,14) | getBitsFromRange(A,1,15)) << 1);
+    uint32_t AStage2 = (getBitsFromRange(AStage1,0,1)) + ((getBitsFromRange(AStage1,0,13) | getBitsFromRange(AStage1,2,15)) << 2);
+    uint32_t AStage3 = (getBitsFromRange(AStage2,0,3)) + ((getBitsFromRange(AStage2,0,11) | getBitsFromRange(AStage2,4,15)) << 4);
+    uint32_t AStage4 = (getBitsFromRange(AStage3,0,7)) + ((getBitsFromRange(AStage3,0,7) | getBitsFromRange(AStage3,8,15)) << 8);
+    uint32_t out = ((AStage4 << 1) ^ input);
+    out = getBitsFromRange(out,0,16);
     return out;
 }
 
@@ -75,10 +88,13 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
     }
     case -1:
     {
-#ifdef INV
+#if INV == 16
         selection = static_cast<uint32_t>(Inverse(Multiplicand));
         selection = (getBitsFromRange(selection,15,15) << 16) + selection;
-#elif
+#elif INV == 17
+        selection = (getBitsFromRange(Multiplicand,15,15) << 16) + Multiplicand;
+        selection = static_cast<uint32_t>(Inverse17(selection));  //extend first,inverse second
+#else
         selection = static_cast<uint32_t>(Multiplicand);
         int signBit = getBitsFromRange(selection,15,15);
         selection = uint32_t(signBit << 16) + selection;
@@ -88,10 +104,13 @@ BoothDecode(int32_t MultiplierBits,uint16_t Multiplicand)
     }
     case -2:
     {
-#ifdef INV
+#if INV == 16
         selection = static_cast<uint32_t>(Inverse(Multiplicand));
         selection = selection << 1;
-#elif
+#elif INV == 17
+        selection = Multiplicand << 1;
+        selection = static_cast<uint32_t>(Inverse17(selection));
+#else
         selection = static_cast<uint32_t>(Multiplicand) << 1;
 
         std::bitset<32> bin1(selection);  // 将 num 转换为 16 位二进制
@@ -177,7 +196,7 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
 #ifdef PLUS
             PP[0] = static_cast<uint32_t>(expansionBits << 16) + getBitsFromRange(tmpPP,0,15);
 #else
-            PP[0] = static_cast<uint32_t>(expansionBits << 17) + tmpPP;
+            PP[0] = static_cast<uint32_t>(expansionBits << 17) + getBitsFromRange(tmpPP,0,16);
 #endif
         }else
         {
@@ -196,7 +215,7 @@ multiplicationUnit(uint16_t Multiplier,uint16_t Multiplicand)
             std::bitset<32> bin_tmpPP(tmpPP);  // 将 num 转换为 16 位二进制
             std::cout << "Binary tmpPP: " << tmpPP << std::endl;
             std::cout << "E="<<E <<std::endl;
-
+            tmpPP = getBitsFromRange(tmpPP,0,16);
             if (i==7)
             {
                 PP[i] = (tmpPP + static_cast<uint32_t>(E << 17))<<(2*i);
@@ -236,24 +255,51 @@ int main(int argc, char* argv[])
     std::uniform_int_distribution<uint16_t> dis(0, 65535);
 
     // 生成随机数
-    int MAX_NUM = 10000;
+    int random_num = 10000;
+    bool is_pass = true;
+    int MAX_NUM = 0;
 
     // 如果用户传入了命令行参数
     if (argc == 2) {
         // 将传入的参数转换为整数
-        MAX_NUM = std::atoi(argv[1]);
+        random_num = std::atoi(argv[1]);
     }
 
     std::ofstream outFile("result.txt");
 
+//读取inputdata数据，包含特殊+随机数据
+    std::ifstream infile("inputs.txt");
+    if(!infile.is_open()){
+        std::cerr << "Error: Cannot open file "<< "inputs.txt" <<"!"<<std::endl;
+        return 1;
+    }
+    std::vector<std::pair<uint16_t,uint16_t>>test_case;
+    uint16_t input_a,input_b;
+    while (infile>>std::hex>>input_a>>input_b)
+    {
+        test_case.emplace_back(input_a,input_b);
+    }
+    infile.close();
+
+    int input_num = test_case.size();
+
+
+#ifdef RAMDOM
+    MAX_NUM = random_num;
+#else
+    MAX_NUM = input_num;
+#endif 
+
     for (size_t i = 0; i < MAX_NUM; i++)
     {
+
 #ifdef RANDOM
         uint16_t random_number1 = dis(gen);
         uint16_t random_number2 = dis(gen);
 #else
-        uint16_t random_number1 = 0x7fff;
-        uint16_t random_number2 = 0x8000;
+        auto& pair = test_case[i];
+        uint16_t random_number1 = pair.first;
+        uint16_t random_number2 = pair.second;
 #endif
         std::cout<<"-----------------------start-----------------------"<<std::endl;
         std::cout<<"i="<<i<<std::endl;
@@ -272,21 +318,23 @@ int main(int argc, char* argv[])
         printf("result_r=%d\n",static_cast<int>(result_r));
         std::cout << "BinResult_r:"<< BinResult_r << std::endl;
         
-
         //compare
         if (result!=result_r)
         {
+            std::cout << "fail"<< std::endl;
             outFile << "fail" << std::endl;
             outFile << "MAX_NUM: "<<MAX_NUM<<std::endl; 
             outFile << "i="<<i<<std::endl;
             outFile << "result="<<static_cast<int>(result)<<std::endl;
             outFile << "result_r="<<static_cast<int>(result_r)<<std::endl;
-            outFile.close();
-            return 0;
+            is_pass = false;
         }
         
     }
-    outFile << "pass" << std::endl;
+    if (is_pass)
+        outFile << "pass" << std::endl;
+    else
+        outFile << "fail" << std::endl;
     outFile << "MAX_NUM: "<<MAX_NUM<<std::endl;
     outFile.close();
 
