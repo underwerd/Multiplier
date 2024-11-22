@@ -1,2 +1,2 @@
 pass
-MAX_NUM: 65
+MAX_NUM: 10064
