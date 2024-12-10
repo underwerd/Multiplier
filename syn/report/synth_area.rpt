@@ -1,0 +1,394 @@
+ 
+****************************************
+Report : area
+Design : Multiplier_top_p
+Version: O-2018.06-SP1
+Date   : Tue Dec  3 19:52:28 2024
+****************************************
+
+Error: Could not find user specified selection group: predcaps. (WL-40)
+Error: Could not find user specified selection group: predcaps. (WL-40)
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    typical (File: /home/ic_libs/smic180/digital/sc/synopsys/typical.db)
+
+Number of ports:                         3839
+Number of nets:                          7779
+Number of cells:                         4237
+Number of combinational cells:           3755
+Number of sequential cells:               212
+Number of macros/black boxes:               0
+Number of buf/inv:                       2101
+Number of references:                       9
+
+Combinational area:              43130.102913
+Buf/Inv area:                    18990.417841
+Noncombinational area:           11123.481739
+Macro/Black Box area:                0.000000
+Net Interconnect area:          320974.956818
+
+Total cell area:                 54253.584652
+Total area:                     375228.541470
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------
+Multiplier_top_p                  54253.5847    100.0   4211.2225  11123.4817  0.0000  Multiplier_top_p
+u_PP_top                          19010.3763     35.0   1743.0336      0.0000  0.0000  PP_top
+u_PP_top/gen_PP_tmp[0].U_BoothEndecode
+                                     49.8960      0.1     49.8960      0.0000  0.0000  BoothEndecode_mydesign_7
+u_PP_top/gen_PP_tmp[0].u_Caculate    16.6320      0.0     16.6320      0.0000  0.0000  CaculateE_mydesign_7
+u_PP_top/gen_PP_tmp[0].u_PPUint    2082.3264      3.8   1540.1232      0.0000  0.0000  PPUnit_mydesign_7
+u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17
+                                    542.2032      1.0    542.2032      0.0000  0.0000  Inverse17_mydesign_7
+u_PP_top/gen_PP_tmp[1].U_BoothEndecode
+                                    119.7504      0.2    119.7504      0.0000  0.0000  BoothEndecode_mydesign_6
+u_PP_top/gen_PP_tmp[1].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_6
+u_PP_top/gen_PP_tmp[1].u_PPUint    2009.1456      3.7   1496.8800      0.0000  0.0000  PPUnit_mydesign_6
+u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17
+                                    512.2656      0.9    512.2656      0.0000  0.0000  Inverse17_mydesign_6
+u_PP_top/gen_PP_tmp[2].U_BoothEndecode
+                                    119.7504      0.2    119.7504      0.0000  0.0000  BoothEndecode_mydesign_5
+u_PP_top/gen_PP_tmp[2].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_5
+u_PP_top/gen_PP_tmp[2].u_PPUint    2019.1248      3.7   1470.2688      0.0000  0.0000  PPUnit_mydesign_5
+u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17
+                                    548.8560      1.0    548.8560      0.0000  0.0000  Inverse17_mydesign_5
+u_PP_top/gen_PP_tmp[3].U_BoothEndecode
+                                    123.0768      0.2    123.0768      0.0000  0.0000  BoothEndecode_mydesign_4
+u_PP_top/gen_PP_tmp[3].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_4
+u_PP_top/gen_PP_tmp[3].u_PPUint    2005.8192      3.7   1486.9008      0.0000  0.0000  PPUnit_mydesign_4
+u_PP_top/gen_PP_tmp[3].u_PPUint/u_Inverse17
+                                    518.9184      1.0    518.9184      0.0000  0.0000  Inverse17_mydesign_4
+u_PP_top/gen_PP_tmp[4].U_BoothEndecode
+                                    123.0768      0.2    123.0768      0.0000  0.0000  BoothEndecode_mydesign_3
+u_PP_top/gen_PP_tmp[4].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_3
+u_PP_top/gen_PP_tmp[4].u_PPUint    1995.8400      3.7   1470.2688      0.0000  0.0000  PPUnit_mydesign_3
+u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17
+                                    525.5712      1.0    525.5712      0.0000  0.0000  Inverse17_mydesign_3
+u_PP_top/gen_PP_tmp[5].U_BoothEndecode
+                                    123.0768      0.2    123.0768      0.0000  0.0000  BoothEndecode_mydesign_2
+u_PP_top/gen_PP_tmp[5].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_2
+u_PP_top/gen_PP_tmp[5].u_PPUint    2009.1456      3.7   1466.9424      0.0000  0.0000  PPUnit_mydesign_2
+u_PP_top/gen_PP_tmp[5].u_PPUint/u_Inverse17
+                                    542.2032      1.0    542.2032      0.0000  0.0000  Inverse17_mydesign_2
+u_PP_top/gen_PP_tmp[6].U_BoothEndecode
+                                    123.0768      0.2    123.0768      0.0000  0.0000  BoothEndecode_mydesign_1
+u_PP_top/gen_PP_tmp[6].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_1
+u_PP_top/gen_PP_tmp[6].u_PPUint    1979.2080      3.6   1463.6160      0.0000  0.0000  PPUnit_mydesign_1
+u_PP_top/gen_PP_tmp[6].u_PPUint/u_Inverse17
+                                    515.5920      1.0    515.5920      0.0000  0.0000  Inverse17_mydesign_1
+u_PP_top/gen_PP_tmp[7].U_BoothEndecode
+                                    133.0560      0.2    133.0560      0.0000  0.0000  BoothEndecode_mydesign_0
+u_PP_top/gen_PP_tmp[7].u_Caculate    33.2640      0.1     33.2640      0.0000  0.0000  CaculateE_mydesign_0
+u_PP_top/gen_PP_tmp[7].u_PPUint    2002.4928      3.7   1466.9424      0.0000  0.0000  PPUnit_mydesign_0
+u_PP_top/gen_PP_tmp[7].u_PPUint/u_Inverse17
+                                    535.5504      1.0    535.5504      0.0000  0.0000  Inverse17_mydesign_0
+u_WallaceTree_top                 10148.8465     18.7     93.1392      0.0000  0.0000  WallaceTree_top
+u_WallaceTree_top/gen_halfAdder[0].u_HalfAdder
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_10
+u_WallaceTree_top/gen_halfAdder[1].u_HalfAdder
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_9
+u_WallaceTree_top/gen_halfAdder[2].u_HalfAdder
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_8
+u_WallaceTree_top/gen_halfAdder[3].u_HalfAdder
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_7
+u_WallaceTree_top/gen_halfAdder[4].u_HalfAdder
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_6
+u_WallaceTree_top/u_WallaceTree_0  3323.0736      6.1     13.3056      0.0000  0.0000  WallaceTree_mydesign_2
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[0].u_CSA42
+                                     99.7920      0.2     99.7920      0.0000  0.0000  CSA42_mydesign_44
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[10].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_34
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[11].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_33
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[12].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_32
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[13].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_31
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[14].u_CSA42
+                                     99.7920      0.2     99.7920      0.0000  0.0000  CSA42_mydesign_30
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[1].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_43
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[2].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_42
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[3].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_41
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[4].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_40
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[5].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_39
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[6].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_38
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[7].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_37
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[8].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_36
+u_WallaceTree_top/u_WallaceTree_0/gen_CSA42[9].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_35
+u_WallaceTree_top/u_WallaceTree_0/u_CSA32_0
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_5
+u_WallaceTree_top/u_WallaceTree_0/u_CSA32_1
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_4
+u_WallaceTree_top/u_WallaceTree_0/u_HalfAdder_0
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_5
+u_WallaceTree_top/u_WallaceTree_0/u_HalfAdder_1
+                                     43.2432      0.1     43.2432      0.0000  0.0000  HalfAdder_mydesign_4
+u_WallaceTree_top/u_WallaceTree_1  3253.2192      6.0     13.3056      0.0000  0.0000  WallaceTree_mydesign_1
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[0].u_CSA42
+                                    113.0976      0.2    113.0976      0.0000  0.0000  CSA42_mydesign_29
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[10].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_19
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[11].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_18
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[12].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_17
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[13].u_CSA42
+                                    113.0976      0.2    113.0976      0.0000  0.0000  CSA42_mydesign_16
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[14].u_CSA42
+                                    113.0976      0.2    113.0976      0.0000  0.0000  CSA42_mydesign_15
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[1].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_28
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[2].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_27
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[3].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_26
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[4].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_25
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[5].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_24
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[6].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_23
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[7].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_22
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[8].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_21
+u_WallaceTree_top/u_WallaceTree_1/gen_CSA42[9].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_20
+u_WallaceTree_top/u_WallaceTree_1/u_CSA32_0
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_3
+u_WallaceTree_top/u_WallaceTree_1/u_CSA32_1
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_2
+u_WallaceTree_top/u_WallaceTree_1/u_HalfAdder_0
+                                     43.2432      0.1     43.2432      0.0000  0.0000  HalfAdder_mydesign_3
+u_WallaceTree_top/u_WallaceTree_1/u_HalfAdder_1
+                                     43.2432      0.1     43.2432      0.0000  0.0000  HalfAdder_mydesign_2
+u_WallaceTree_top/u_WallaceTree_2  3329.7264      6.1     26.6112      0.0000  0.0000  WallaceTree_mydesign_0
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[0].u_CSA42
+                                     99.7920      0.2     99.7920      0.0000  0.0000  CSA42_mydesign_14
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[10].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_4
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[11].u_CSA42
+                                    229.5216      0.4    229.5216      0.0000  0.0000  CSA42_mydesign_3
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[12].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_2
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[13].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_1
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[14].u_CSA42
+                                     99.7920      0.2     99.7920      0.0000  0.0000  CSA42_mydesign_0
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[1].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_13
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[2].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_12
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[3].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_11
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[4].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_10
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[5].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_9
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[6].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_8
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[7].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_7
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[8].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_6
+u_WallaceTree_top/u_WallaceTree_2/gen_CSA42[9].u_CSA42
+                                    222.8688      0.4    222.8688      0.0000  0.0000  CSA42_mydesign_5
+u_WallaceTree_top/u_WallaceTree_2/u_CSA32_0
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_1
+u_WallaceTree_top/u_WallaceTree_2/u_CSA32_1
+                                     69.8544      0.1     69.8544      0.0000  0.0000  CSA32_mydesign_0
+u_WallaceTree_top/u_WallaceTree_2/u_HalfAdder_0
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_1
+u_WallaceTree_top/u_WallaceTree_2/u_HalfAdder_1
+                                     29.9376      0.1     29.9376      0.0000  0.0000  HalfAdder_mydesign_0
+u_kas_top                          9759.6577     18.0     13.3056      0.0000  0.0000  ksa_top
+u_kas_top/s1                       1303.9488      2.4      0.0000      0.0000  0.0000  ks_1
+u_kas_top/s1/pg_0                    13.3056      0.0     13.3056      0.0000  0.0000  pg_mydesign_31
+u_kas_top/s1/pg_1                    13.3056      0.0     13.3056      0.0000  0.0000  pg_mydesign_30
+u_kas_top/s1/pg_10                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_21
+u_kas_top/s1/pg_11                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_20
+u_kas_top/s1/pg_12                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_19
+u_kas_top/s1/pg_13                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_18
+u_kas_top/s1/pg_14                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_17
+u_kas_top/s1/pg_15                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_16
+u_kas_top/s1/pg_16                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_15
+u_kas_top/s1/pg_17                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_14
+u_kas_top/s1/pg_18                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_13
+u_kas_top/s1/pg_19                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_12
+u_kas_top/s1/pg_2                    39.9168      0.1     39.9168      0.0000  0.0000  pg_mydesign_29
+u_kas_top/s1/pg_20                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_11
+u_kas_top/s1/pg_21                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_10
+u_kas_top/s1/pg_22                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_9
+u_kas_top/s1/pg_23                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_8
+u_kas_top/s1/pg_24                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_7
+u_kas_top/s1/pg_25                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_6
+u_kas_top/s1/pg_26                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_5
+u_kas_top/s1/pg_27                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_4
+u_kas_top/s1/pg_28                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_3
+u_kas_top/s1/pg_29                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_2
+u_kas_top/s1/pg_3                    39.9168      0.1     39.9168      0.0000  0.0000  pg_mydesign_28
+u_kas_top/s1/pg_30                   43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_1
+u_kas_top/s1/pg_31                   29.9376      0.1     29.9376      0.0000  0.0000  pg_mydesign_0
+u_kas_top/s1/pg_4                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_27
+u_kas_top/s1/pg_5                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_26
+u_kas_top/s1/pg_6                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_25
+u_kas_top/s1/pg_7                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_24
+u_kas_top/s1/pg_8                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_23
+u_kas_top/s1/pg_9                    43.2432      0.1     43.2432      0.0000  0.0000  pg_mydesign_22
+u_kas_top/s2                       2029.1040      3.7    838.2528      0.0000  0.0000  ks_2
+u_kas_top/s2/bc_0                    13.3056      0.0     13.3056      0.0000  0.0000  black_mydesign_101
+u_kas_top/s2/bc_1                    26.6112      0.0     26.6112      0.0000  0.0000  black_mydesign_100
+u_kas_top/s2/bc_10                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_91
+u_kas_top/s2/bc_11                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_90
+u_kas_top/s2/bc_12                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_89
+u_kas_top/s2/bc_13                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_88
+u_kas_top/s2/bc_14                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_87
+u_kas_top/s2/bc_15                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_86
+u_kas_top/s2/bc_16                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_85
+u_kas_top/s2/bc_17                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_84
+u_kas_top/s2/bc_18                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_83
+u_kas_top/s2/bc_19                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_82
+u_kas_top/s2/bc_2                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_99
+u_kas_top/s2/bc_20                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_81
+u_kas_top/s2/bc_21                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_80
+u_kas_top/s2/bc_22                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_79
+u_kas_top/s2/bc_23                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_78
+u_kas_top/s2/bc_24                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_77
+u_kas_top/s2/bc_25                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_76
+u_kas_top/s2/bc_26                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_75
+u_kas_top/s2/bc_27                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_74
+u_kas_top/s2/bc_28                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_73
+u_kas_top/s2/bc_29                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_72
+u_kas_top/s2/bc_3                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_98
+u_kas_top/s2/bc_30                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_71
+u_kas_top/s2/bc_4                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_97
+u_kas_top/s2/bc_5                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_96
+u_kas_top/s2/bc_6                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_95
+u_kas_top/s2/bc_7                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_94
+u_kas_top/s2/bc_8                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_93
+u_kas_top/s2/bc_9                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_92
+u_kas_top/s3                       1743.0336      3.2    425.7792      0.0000  0.0000  ks_3
+u_kas_top/s3/bc_0                    26.6112      0.0     26.6112      0.0000  0.0000  black_mydesign_70
+u_kas_top/s3/bc_1                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_69
+u_kas_top/s3/bc_10                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_60
+u_kas_top/s3/bc_11                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_59
+u_kas_top/s3/bc_12                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_58
+u_kas_top/s3/bc_13                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_57
+u_kas_top/s3/bc_14                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_56
+u_kas_top/s3/bc_15                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_55
+u_kas_top/s3/bc_16                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_54
+u_kas_top/s3/bc_17                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_53
+u_kas_top/s3/bc_18                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_52
+u_kas_top/s3/bc_19                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_51
+u_kas_top/s3/bc_2                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_68
+u_kas_top/s3/bc_20                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_50
+u_kas_top/s3/bc_21                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_49
+u_kas_top/s3/bc_22                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_48
+u_kas_top/s3/bc_23                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_47
+u_kas_top/s3/bc_24                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_46
+u_kas_top/s3/bc_25                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_45
+u_kas_top/s3/bc_26                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_44
+u_kas_top/s3/bc_27                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_43
+u_kas_top/s3/bc_28                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_42
+u_kas_top/s3/bc_3                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_67
+u_kas_top/s3/bc_4                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_66
+u_kas_top/s3/bc_5                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_65
+u_kas_top/s3/bc_6                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_64
+u_kas_top/s3/bc_7                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_63
+u_kas_top/s3/bc_8                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_62
+u_kas_top/s3/bc_9                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_61
+u_kas_top/s3/gc_1                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_28
+u_kas_top/s4                       1609.9776      3.0    439.0848      0.0000  0.0000  ks_4
+u_kas_top/s4/bc_0                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_41
+u_kas_top/s4/bc_1                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_40
+u_kas_top/s4/bc_10                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_31
+u_kas_top/s4/bc_11                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_30
+u_kas_top/s4/bc_12                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_29
+u_kas_top/s4/bc_13                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_28
+u_kas_top/s4/bc_14                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_27
+u_kas_top/s4/bc_15                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_26
+u_kas_top/s4/bc_16                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_25
+u_kas_top/s4/bc_17                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_24
+u_kas_top/s4/bc_18                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_23
+u_kas_top/s4/bc_19                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_22
+u_kas_top/s4/bc_2                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_39
+u_kas_top/s4/bc_20                   46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_21
+u_kas_top/s4/bc_21                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_20
+u_kas_top/s4/bc_22                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_19
+u_kas_top/s4/bc_23                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_18
+u_kas_top/s4/bc_24                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_17
+u_kas_top/s4/bc_3                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_38
+u_kas_top/s4/bc_4                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_37
+u_kas_top/s4/bc_5                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_36
+u_kas_top/s4/bc_6                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_35
+u_kas_top/s4/bc_7                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_34
+u_kas_top/s4/bc_8                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_33
+u_kas_top/s4/bc_9                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_32
+u_kas_top/s4/gc_0                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_27
+u_kas_top/s4/gc_1                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_26
+u_kas_top/s4/gc_2                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_25
+u_kas_top/s4/gc_3                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_24
+u_kas_top/s5                       1317.2544      2.4    545.5296      0.0000  0.0000  ks_5
+u_kas_top/s5/bc_0                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_16
+u_kas_top/s5/bc_1                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_15
+u_kas_top/s5/bc_10                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_6
+u_kas_top/s5/bc_11                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_5
+u_kas_top/s5/bc_12                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_4
+u_kas_top/s5/bc_13                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_3
+u_kas_top/s5/bc_14                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_2
+u_kas_top/s5/bc_15                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_1
+u_kas_top/s5/bc_16                   33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_0
+u_kas_top/s5/bc_2                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_14
+u_kas_top/s5/bc_3                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_13
+u_kas_top/s5/bc_4                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_12
+u_kas_top/s5/bc_5                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_11
+u_kas_top/s5/bc_6                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_10
+u_kas_top/s5/bc_7                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_9
+u_kas_top/s5/bc_8                    46.5696      0.1     46.5696      0.0000  0.0000  black_mydesign_8
+u_kas_top/s5/bc_9                    33.2640      0.1     33.2640      0.0000  0.0000  black_mydesign_7
+u_kas_top/s5/gc_0                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_23
+u_kas_top/s5/gc_1                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_22
+u_kas_top/s5/gc_2                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_21
+u_kas_top/s5/gc_3                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_20
+u_kas_top/s5/gc_4                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_19
+u_kas_top/s5/gc_5                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_18
+u_kas_top/s5/gc_6                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_17
+u_kas_top/s5/gc_7                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_16
+u_kas_top/s6                        918.0864      1.7    612.0576      0.0000  0.0000  ks_6
+u_kas_top/s6/gc_1                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_15
+u_kas_top/s6/gc_10                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_6
+u_kas_top/s6/gc_11                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_5
+u_kas_top/s6/gc_12                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_4
+u_kas_top/s6/gc_13                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_3
+u_kas_top/s6/gc_14                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_2
+u_kas_top/s6/gc_15                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_1
+u_kas_top/s6/gc_16                   19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_0
+u_kas_top/s6/gc_2                    13.3056      0.0     13.3056      0.0000  0.0000  grey_mydesign_14
+u_kas_top/s6/gc_3                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_13
+u_kas_top/s6/gc_4                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_12
+u_kas_top/s6/gc_5                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_11
+u_kas_top/s6/gc_6                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_10
+u_kas_top/s6/gc_7                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_9
+u_kas_top/s6/gc_8                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_8
+u_kas_top/s6/gc_9                    19.9584      0.0     19.9584      0.0000  0.0000  grey_mydesign_7
+u_kas_top/s7                        824.9472      1.5    824.9472      0.0000  0.0000  ks_7
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------
+Total                                                  43130.1029  11123.4817  0.0000
+
+1

@@ -1,0 +1,535 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 4
+Design : Multiplier_top_p
+Version: O-2018.06-SP1
+Date   : Tue Dec  3 19:52:28 2024
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: Multiplier[7]
+              (input port clocked by clk)
+  Endpoint: PP4_r_reg[25]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  Multiplier[7] (in)                                      0.00       2.00 f
+  u_PP_top/Multiplier[7] (PP_top)                         0.00       2.00 f
+  u_PP_top/U18/Y (BUFX3)                                  0.09       2.09 f
+  u_PP_top/U31/Y (BUFX2)                                  0.13       2.22 f
+  u_PP_top/gen_PP_tmp[4].U_BoothEndecode/MultiplierBits[0] (BoothEndecode_mydesign_3)
+                                                          0.00       2.22 f
+  u_PP_top/gen_PP_tmp[4].U_BoothEndecode/U8/Y (BUFX2)     0.14       2.36 f
+  u_PP_top/gen_PP_tmp[4].U_BoothEndecode/U11/Y (OAI21X1)
+                                                          0.25       2.61 r
+  u_PP_top/gen_PP_tmp[4].U_BoothEndecode/U10/Y (NOR2X1)
+                                                          0.17       2.78 f
+  u_PP_top/gen_PP_tmp[4].U_BoothEndecode/NEG1 (BoothEndecode_mydesign_3)
+                                                          0.00       2.78 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/NEG1 (PPUnit_mydesign_3)
+                                                          0.00       2.78 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U62/Y (OAI21X1)         0.26       3.04 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U60/Y (BUFX2)           0.15       3.19 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U31/Y (BUFX2)           0.14       3.33 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U55/Y (INVX1)           0.10       3.43 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U121/Y (NAND2XL)        0.22       3.65 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U122/Y (INVXL)          0.16       3.81 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/in[0] (Inverse17_mydesign_3)
+                                                          0.00       3.81 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U1/Y (BUFX1)
+                                                          0.21       4.02 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U17/Y (NOR2X2)
+                                                          0.14       4.16 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U28/Y (INVXL)
+                                                          0.14       4.30 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U29/Y (NOR2X1)
+                                                          0.24       4.54 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U6/Y (INVX1)
+                                                          0.14       4.68 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U18/Y (NOR2X1)
+                                                          0.23       4.91 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U27/Y (INVX1)
+                                                          0.14       5.05 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U26/Y (NOR2X1)
+                                                          0.23       5.29 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U16/Y (INVX1)
+                                                          0.14       5.43 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U19/Y (NOR2X1)
+                                                          0.23       5.66 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U15/Y (INVX1)
+                                                          0.15       5.82 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U14/Y (NOR2X2)
+                                                          0.15       5.96 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U5/Y (INVX1)
+                                                          0.13       6.09 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U13/Y (NOR2X2)
+                                                          0.15       6.24 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U4/Y (INVX1)
+                                                          0.12       6.35 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U25/Y (NOR2X1)
+                                                          0.23       6.58 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U12/Y (INVX1)
+                                                          0.15       6.74 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U44/Y (NOR2X2)
+                                                          0.15       6.89 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U24/Y (INVX1)
+                                                          0.12       7.00 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U23/Y (NOR2X1)
+                                                          0.23       7.23 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U11/Y (INVX1)
+                                                          0.14       7.37 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U22/Y (NOR2X1)
+                                                          0.23       7.61 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U10/Y (INVX1)
+                                                          0.14       7.75 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U21/Y (NOR2X1)
+                                                          0.23       7.98 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U9/Y (INVX1)
+                                                          0.15       8.13 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U45/Y (NOR2X2)
+                                                          0.15       8.28 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U20/Y (INVX1)
+                                                          0.13       8.41 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U8/Y (NOR2X2)
+                                                          0.16       8.57 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U7/Y (INVX2)
+                                                          0.07       8.64 f
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U2/Y (NOR2X1)
+                                                          0.24       8.88 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/U3/Y (XNOR2X1)
+                                                          0.27       9.15 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/u_Inverse17/out[16] (Inverse17_mydesign_3)
+                                                          0.00       9.15 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/U4/Y (OAI2BB2X1)        0.22       9.37 r
+  u_PP_top/gen_PP_tmp[4].u_PPUint/PP[16] (PPUnit_mydesign_3)
+                                                          0.00       9.37 r
+  u_PP_top/gen_PP_tmp[4].u_Caculate/PP_sign_bit (CaculateE_mydesign_3)
+                                                          0.00       9.37 r
+  u_PP_top/gen_PP_tmp[4].u_Caculate/U2/Y (NAND2X1)        0.09       9.46 f
+  u_PP_top/gen_PP_tmp[4].u_Caculate/E (CaculateE_mydesign_3)
+                                                          0.00       9.46 f
+  u_PP_top/PP4[25] (PP_top)                               0.00       9.46 f
+  U335/Y (AND2X1)                                         0.18       9.64 f
+  PP4_r_reg[25]/D (DFFHQXL)                               0.00       9.64 f
+  data arrival time                                                  9.64
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.20       9.80
+  PP4_r_reg[25]/CK (DFFHQXL)                              0.00       9.80 r
+  library setup time                                     -0.15       9.65
+  data required time                                                 9.65
+  --------------------------------------------------------------------------
+  data required time                                                 9.65
+  data arrival time                                                 -9.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: Multiplier[1]
+              (input port clocked by clk)
+  Endpoint: PP0_r_reg[18]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 r
+  Multiplier[1] (in)                                      0.00       2.00 r
+  u_PP_top/Multiplier[1] (PP_top)                         0.00       2.00 r
+  u_PP_top/U17/Y (BUFX3)                                  0.09       2.09 r
+  u_PP_top/U10/Y (BUFX3)                                  0.11       2.20 r
+  u_PP_top/gen_PP_tmp[0].U_BoothEndecode/MultiplierBits[2] (BoothEndecode_mydesign_7)
+                                                          0.00       2.20 r
+  u_PP_top/gen_PP_tmp[0].U_BoothEndecode/U3/Y (INVX1)     0.11       2.31 f
+  u_PP_top/gen_PP_tmp[0].U_BoothEndecode/U5/Y (NOR2X2)
+                                                          0.14       2.46 r
+  u_PP_top/gen_PP_tmp[0].U_BoothEndecode/NEG2 (BoothEndecode_mydesign_7)
+                                                          0.00       2.46 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/NEG2 (PPUnit_mydesign_7)
+                                                          0.00       2.46 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U47/Y (BUFX2)           0.14       2.60 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U46/Y (BUFX2)           0.13       2.73 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U16/Y (BUFX2)           0.13       2.86 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U101/Y (AOI2BB1X1)      0.12       2.97 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U15/Y (BUFX2)           0.15       3.13 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U33/Y (INVX1)           0.15       3.27 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U122/Y (INVXL)          0.14       3.41 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U76/Y (AND2XL)          0.24       3.66 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/in[0] (Inverse17_mydesign_7)
+                                                          0.00       3.66 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U17/Y (INVX1)
+                                                          0.17       3.83 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U16/Y (INVXL)
+                                                          0.10       3.92 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U18/Y (NOR2X1)
+                                                          0.23       4.15 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U6/Y (INVX1)
+                                                          0.14       4.29 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U19/Y (NOR2X1)
+                                                          0.23       4.52 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U5/Y (INVX1)
+                                                          0.14       4.66 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U38/Y (NOR2X1)
+                                                          0.23       4.90 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U40/Y (INVX1)
+                                                          0.14       5.04 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U4/Y (NOR2X1)
+                                                          0.23       5.27 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U41/Y (INVX1)
+                                                          0.14       5.41 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U15/Y (NOR2X1)
+                                                          0.23       5.65 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U42/Y (INVX1)
+                                                          0.15       5.80 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U14/Y (NOR2X2)
+                                                          0.15       5.95 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U43/Y (INVX1)
+                                                          0.13       6.08 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U33/Y (NOR2X2)
+                                                          0.15       6.22 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U34/Y (INVX1)
+                                                          0.12       6.34 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U44/Y (NOR2X1)
+                                                          0.25       6.59 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U3/Y (INVX2)
+                                                          0.09       6.68 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U2/Y (NOR2X1)
+                                                          0.25       6.92 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U13/Y (INVX2)
+                                                          0.10       7.02 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U12/Y (NOR2X2)
+                                                          0.14       7.16 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U31/Y (INVX1)
+                                                          0.13       7.29 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U11/Y (NOR2X2)
+                                                          0.15       7.44 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U32/Y (INVX1)
+                                                          0.12       7.55 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U1/Y (NOR2X1)
+                                                          0.23       7.78 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U10/Y (INVX1)
+                                                          0.15       7.94 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U45/Y (NOR2X2)
+                                                          0.15       8.08 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U9/Y (INVX1)
+                                                          0.13       8.21 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U46/Y (NOR2X2)
+                                                          0.15       8.36 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U8/Y (INVX1)
+                                                          0.13       8.49 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U47/Y (NOR2X2)
+                                                          0.15       8.64 r
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/U7/Y (XNOR2X1)
+                                                          0.18       8.82 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/u_Inverse17/out[16] (Inverse17_mydesign_7)
+                                                          0.00       8.82 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/U18/Y (OAI2BB2X1)       0.22       9.05 f
+  u_PP_top/gen_PP_tmp[0].u_PPUint/PP[16] (PPUnit_mydesign_7)
+                                                          0.00       9.05 f
+  u_PP_top/gen_PP_tmp[0].u_Caculate/PP_sign_bit (CaculateE_mydesign_7)
+                                                          0.00       9.05 f
+  u_PP_top/gen_PP_tmp[0].u_Caculate/U2/Y (OAI2BB1X1)      0.20       9.24 r
+  u_PP_top/gen_PP_tmp[0].u_Caculate/E (CaculateE_mydesign_7)
+                                                          0.00       9.24 r
+  u_PP_top/U3/Y (INVX1)                                   0.12       9.37 f
+  u_PP_top/U7/Y (BUFX3)                                   0.12       9.48 f
+  u_PP_top/PP0[18] (PP_top)                               0.00       9.48 f
+  U325/Y (AND2X1)                                         0.16       9.64 f
+  PP0_r_reg[18]/D (DFFHQXL)                               0.00       9.64 f
+  data arrival time                                                  9.64
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.20       9.80
+  PP0_r_reg[18]/CK (DFFHQXL)                              0.00       9.80 r
+  library setup time                                     -0.15       9.65
+  data required time                                                 9.65
+  --------------------------------------------------------------------------
+  data required time                                                 9.65
+  data arrival time                                                 -9.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: Multiplier[3]
+              (input port clocked by clk)
+  Endpoint: PP2_r_reg[21]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  Multiplier[3] (in)                                      0.00       2.00 f
+  u_PP_top/Multiplier[3] (PP_top)                         0.00       2.00 f
+  u_PP_top/U44/Y (BUFX3)                                  0.10       2.10 f
+  u_PP_top/U6/Y (BUFX3)                                   0.11       2.21 f
+  u_PP_top/gen_PP_tmp[2].U_BoothEndecode/MultiplierBits[0] (BoothEndecode_mydesign_5)
+                                                          0.00       2.21 f
+  u_PP_top/gen_PP_tmp[2].U_BoothEndecode/U1/Y (BUFX3)     0.11       2.32 f
+  u_PP_top/gen_PP_tmp[2].U_BoothEndecode/U10/Y (OAI21XL)
+                                                          0.33       2.65 r
+  u_PP_top/gen_PP_tmp[2].U_BoothEndecode/U5/Y (NOR2X1)
+                                                          0.18       2.82 f
+  u_PP_top/gen_PP_tmp[2].U_BoothEndecode/NEG1 (BoothEndecode_mydesign_5)
+                                                          0.00       2.82 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/NEG1 (PPUnit_mydesign_5)
+                                                          0.00       2.82 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U121/Y (OAI21XL)        0.34       3.16 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U53/Y (BUFX2)           0.16       3.32 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U28/Y (INVX1)           0.11       3.44 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U50/Y (INVX2)           0.10       3.54 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U44/Y (INVX1)           0.10       3.64 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U43/Y (INVX1)           0.16       3.81 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U2/Y (INVX1)            0.13       3.94 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U3/Y (AOI22X1)          0.26       4.20 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U85/Y (INVXL)           0.18       4.38 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/in[1] (Inverse17_mydesign_5)
+                                                          0.00       4.38 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U4/Y (NOR2X1)
+                                                          0.24       4.63 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U3/Y (INVX1)
+                                                          0.15       4.78 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U12/Y (NOR2X2)
+                                                          0.15       4.93 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U14/Y (INVX1)
+                                                          0.12       5.05 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U13/Y (NOR2X1)
+                                                          0.23       5.28 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U15/Y (INVX1)
+                                                          0.15       5.43 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U30/Y (NOR2X2)
+                                                          0.15       5.58 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U32/Y (INVX1)
+                                                          0.13       5.71 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U11/Y (NOR2X2)
+                                                          0.15       5.85 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U34/Y (INVX1)
+                                                          0.12       5.97 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U35/Y (NOR2X1)
+                                                          0.23       6.20 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U36/Y (INVX1)
+                                                          0.14       6.34 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U37/Y (NOR2X1)
+                                                          0.23       6.57 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U38/Y (INVX1)
+                                                          0.15       6.73 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U39/Y (NOR2X2)
+                                                          0.15       6.88 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U10/Y (INVX1)
+                                                          0.12       6.99 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U1/Y (NOR2X1)
+                                                          0.23       7.22 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U2/Y (INVX1)
+                                                          0.15       7.38 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U40/Y (NOR2X2)
+                                                          0.15       7.52 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U9/Y (INVX1)
+                                                          0.13       7.65 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U41/Y (NOR2X2)
+                                                          0.15       7.80 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U8/Y (INVX1)
+                                                          0.13       7.93 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U42/Y (NOR2X2)
+                                                          0.15       8.07 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U7/Y (INVX1)
+                                                          0.13       8.20 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U25/Y (NOR2X2)
+                                                          0.15       8.35 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U6/Y (INVX1)
+                                                          0.13       8.47 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U43/Y (NOR2X2)
+                                                          0.15       8.62 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U5/Y (INVX1)
+                                                          0.13       8.75 f
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U44/Y (NOR2X2)
+                                                          0.15       8.90 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/U45/Y (XNOR2X1)
+                                                          0.23       9.13 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/u_Inverse17/out[16] (Inverse17_mydesign_5)
+                                                          0.00       9.13 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/U151/Y (OAI2BB2X1)      0.22       9.35 r
+  u_PP_top/gen_PP_tmp[2].u_PPUint/PP[16] (PPUnit_mydesign_5)
+                                                          0.00       9.35 r
+  u_PP_top/gen_PP_tmp[2].u_Caculate/PP_sign_bit (CaculateE_mydesign_5)
+                                                          0.00       9.35 r
+  u_PP_top/gen_PP_tmp[2].u_Caculate/U2/Y (NAND2X1)        0.09       9.44 f
+  u_PP_top/gen_PP_tmp[2].u_Caculate/E (CaculateE_mydesign_5)
+                                                          0.00       9.44 f
+  u_PP_top/PP2[21] (PP_top)                               0.00       9.44 f
+  U331/Y (AND2X1)                                         0.18       9.62 f
+  PP2_r_reg[21]/D (DFFHQXL)                               0.00       9.62 f
+  data arrival time                                                  9.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.20       9.80
+  PP2_r_reg[21]/CK (DFFHQXL)                              0.00       9.80 r
+  library setup time                                     -0.15       9.65
+  data required time                                                 9.65
+  --------------------------------------------------------------------------
+  data required time                                                 9.65
+  data arrival time                                                 -9.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: Multiplier[1]
+              (input port clocked by clk)
+  Endpoint: PP1_r_reg[19]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    2.00       2.00 f
+  Multiplier[1] (in)                                      0.00       2.00 f
+  u_PP_top/Multiplier[1] (PP_top)                         0.00       2.00 f
+  u_PP_top/U17/Y (BUFX3)                                  0.10       2.10 f
+  u_PP_top/U40/Y (BUFX2)                                  0.13       2.22 f
+  u_PP_top/gen_PP_tmp[1].U_BoothEndecode/MultiplierBits[0] (BoothEndecode_mydesign_6)
+                                                          0.00       2.22 f
+  u_PP_top/gen_PP_tmp[1].U_BoothEndecode/U2/Y (BUFX3)     0.12       2.34 f
+  u_PP_top/gen_PP_tmp[1].U_BoothEndecode/U5/Y (NAND2X1)
+                                                          0.16       2.50 r
+  u_PP_top/gen_PP_tmp[1].U_BoothEndecode/U4/Y (NOR2X1)
+                                                          0.09       2.59 f
+  u_PP_top/gen_PP_tmp[1].U_BoothEndecode/X2 (BoothEndecode_mydesign_6)
+                                                          0.00       2.59 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/X2 (PPUnit_mydesign_6)
+                                                          0.00       2.59 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U5/Y (NOR2XL)           0.34       2.93 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U66/Y (INVX1)           0.16       3.09 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U39/Y (BUFX2)           0.16       3.25 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U4/Y (INVX1)            0.15       3.40 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U34/Y (INVX1)           0.13       3.53 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U51/Y (AOI22X2)         0.21       3.75 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U24/Y (INVX2)           0.09       3.84 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/in[1] (Inverse17_mydesign_6)
+                                                          0.00       3.84 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U12/Y (NOR2X2)
+                                                          0.13       3.97 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U28/Y (INVX1)
+                                                          0.12       4.08 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U29/Y (NOR2X1)
+                                                          0.23       4.31 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U4/Y (INVX1)
+                                                          0.14       4.45 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U30/Y (NOR2X1)
+                                                          0.23       4.69 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U3/Y (INVX1)
+                                                          0.14       4.83 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U16/Y (NOR2X1)
+                                                          0.23       5.06 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U18/Y (INVX1)
+                                                          0.14       5.20 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U17/Y (NOR2X1)
+                                                          0.23       5.43 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U20/Y (INVX1)
+                                                          0.14       5.57 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U19/Y (NOR2X1)
+                                                          0.23       5.81 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U11/Y (INVX1)
+                                                          0.14       5.95 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U21/Y (NOR2X1)
+                                                          0.23       6.18 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U10/Y (INVX1)
+                                                          0.14       6.32 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U22/Y (NOR2X1)
+                                                          0.23       6.56 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U24/Y (INVX1)
+                                                          0.14       6.70 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U23/Y (NOR2X1)
+                                                          0.23       6.93 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U9/Y (INVX1)
+                                                          0.14       7.07 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U15/Y (NOR2X1)
+                                                          0.23       7.30 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U26/Y (INVX1)
+                                                          0.14       7.44 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U25/Y (NOR2X1)
+                                                          0.23       7.68 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U8/Y (INVX1)
+                                                          0.14       7.82 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U27/Y (NOR2X1)
+                                                          0.23       8.05 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U13/Y (INVX1)
+                                                          0.15       8.21 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U7/Y (NOR2X2)
+                                                          0.15       8.36 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U14/Y (INVX1)
+                                                          0.13       8.48 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U6/Y (NOR2X2)
+                                                          0.16       8.64 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U2/Y (INVX2)
+                                                          0.08       8.72 f
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U5/Y (NOR2X2)
+                                                          0.15       8.87 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/U1/Y (XNOR2XL)
+                                                          0.26       9.13 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/u_Inverse17/out[16] (Inverse17_mydesign_6)
+                                                          0.00       9.13 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/U69/Y (OAI2BB2X1)       0.22       9.35 r
+  u_PP_top/gen_PP_tmp[1].u_PPUint/PP[16] (PPUnit_mydesign_6)
+                                                          0.00       9.35 r
+  u_PP_top/gen_PP_tmp[1].u_Caculate/PP_sign_bit (CaculateE_mydesign_6)
+                                                          0.00       9.35 r
+  u_PP_top/gen_PP_tmp[1].u_Caculate/U2/Y (NAND2X1)        0.09       9.44 f
+  u_PP_top/gen_PP_tmp[1].u_Caculate/E (CaculateE_mydesign_6)
+                                                          0.00       9.44 f
+  u_PP_top/PP1[19] (PP_top)                               0.00       9.44 f
+  U345/Y (AND2X1)                                         0.18       9.62 f
+  PP1_r_reg[19]/D (DFFHQXL)                               0.00       9.62 f
+  data arrival time                                                  9.62
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  clock uncertainty                                      -0.20       9.80
+  PP1_r_reg[19]/CK (DFFHQXL)                              0.00       9.80 r
+  library setup time                                     -0.15       9.65
+  data required time                                                 9.65
+  --------------------------------------------------------------------------
+  data required time                                                 9.65
+  data arrival time                                                 -9.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1

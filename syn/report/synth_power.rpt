@@ -1,0 +1,400 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : Multiplier_top_p
+Version: O-2018.06-SP1
+Date   : Tue Dec  3 19:52:28 2024
+****************************************
+
+
+Library(s) Used:
+
+    typical (File: /home/ic_libs/smic180/digital/sc/synopsys/typical.db)
+
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+Multiplier_top_p       smic18_wl10       typical
+
+
+Global Operating Voltage = 1.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+Multiplier_top_p                          2.051    2.073 1.70e+05    4.125 100.0
+  u_kas_top (ksa_top)                     0.330    0.135 3.22e+04    0.465  11.3
+    s7 (ks_7)                          9.70e-03 1.62e-02 4.29e+03 2.59e-02   0.6
+    s6 (ks_6)                          3.08e-02 1.42e-02 2.85e+03 4.50e-02   1.1
+      gc_16 (grey_mydesign_0)          4.48e-04 1.32e-04   42.819 5.81e-04   0.0
+      gc_15 (grey_mydesign_1)          3.94e-04 1.17e-04   42.819 5.11e-04   0.0
+      gc_14 (grey_mydesign_2)          3.59e-04 1.06e-04   42.819 4.66e-04   0.0
+      gc_13 (grey_mydesign_3)          4.96e-04 1.47e-04   42.819 6.43e-04   0.0
+      gc_12 (grey_mydesign_4)          5.66e-04 1.68e-04   42.819 7.34e-04   0.0
+      gc_11 (grey_mydesign_5)          6.81e-04 2.02e-04   42.819 8.83e-04   0.0
+      gc_10 (grey_mydesign_6)          6.54e-04 1.94e-04   42.819 8.48e-04   0.0
+      gc_9 (grey_mydesign_7)           7.78e-04 2.30e-04   42.819 1.01e-03   0.0
+      gc_8 (grey_mydesign_8)           8.18e-04 2.42e-04   42.819 1.06e-03   0.0
+      gc_7 (grey_mydesign_9)           8.45e-04 2.49e-04   42.819 1.09e-03   0.0
+      gc_6 (grey_mydesign_10)          8.33e-04 2.45e-04   42.819 1.08e-03   0.0
+      gc_5 (grey_mydesign_11)          8.22e-04 2.42e-04   42.819 1.06e-03   0.0
+      gc_4 (grey_mydesign_12)          8.57e-04 2.52e-04   42.819 1.11e-03   0.0
+      gc_3 (grey_mydesign_13)          8.47e-04 2.50e-04   42.819 1.10e-03   0.0
+      gc_2 (grey_mydesign_14)          8.52e-04 1.60e-04   25.581 1.01e-03   0.0
+      gc_1 (grey_mydesign_15)          8.51e-04 1.60e-04   25.581 1.01e-03   0.0
+    s5 (ks_5)                          3.45e-02 1.40e-02 3.97e+03 4.85e-02   1.2
+      bc_16 (black_mydesign_0)         4.65e-04 1.35e-04   87.123 6.01e-04   0.0
+      bc_15 (black_mydesign_1)         4.10e-04 1.19e-04   87.123 5.29e-04   0.0
+      bc_14 (black_mydesign_2)         3.74e-04 1.08e-04   87.123 4.82e-04   0.0
+      bc_13 (black_mydesign_3)         5.16e-04 1.48e-04   87.123 6.64e-04   0.0
+      bc_12 (black_mydesign_4)         5.90e-04 1.69e-04   87.123 7.58e-04   0.0
+      bc_11 (black_mydesign_5)         7.09e-04 2.02e-04   87.123 9.12e-04   0.0
+      bc_10 (black_mydesign_6)         6.81e-04 1.94e-04   87.123 8.75e-04   0.0
+      bc_9 (black_mydesign_7)          8.10e-04 2.31e-04   87.123 1.04e-03   0.0
+      bc_8 (black_mydesign_8)          8.66e-04 2.63e-04  134.831 1.13e-03   0.0
+      bc_7 (black_mydesign_9)          8.95e-04 2.72e-04  134.831 1.17e-03   0.0
+      bc_6 (black_mydesign_10)         8.67e-04 2.63e-04   87.123 1.13e-03   0.0
+      bc_5 (black_mydesign_11)         8.56e-04 2.59e-04   87.123 1.12e-03   0.0
+      bc_4 (black_mydesign_12)         8.92e-04 2.70e-04   87.123 1.16e-03   0.0
+      bc_3 (black_mydesign_13)         8.82e-04 2.67e-04   87.123 1.15e-03   0.0
+      bc_2 (black_mydesign_14)         8.82e-04 2.74e-04  134.831 1.16e-03   0.0
+      bc_1 (black_mydesign_15)         8.79e-04 2.73e-04  134.831 1.15e-03   0.0
+      bc_0 (black_mydesign_16)         1.28e-03 2.56e-04  134.831 1.53e-03   0.0
+      gc_7 (grey_mydesign_16)          1.25e-03 2.49e-04   42.819 1.49e-03   0.0
+      gc_6 (grey_mydesign_17)          1.20e-03 2.39e-04   42.819 1.44e-03   0.0
+      gc_5 (grey_mydesign_18)          1.08e-03 2.16e-04   42.819 1.30e-03   0.0
+      gc_4 (grey_mydesign_19)          9.52e-04 1.90e-04   42.819 1.14e-03   0.0
+      gc_3 (grey_mydesign_20)          9.51e-04 1.90e-04   42.819 1.14e-03   0.0
+      gc_2 (grey_mydesign_21)          7.25e-04 9.87e-05   25.581 8.24e-04   0.0
+      gc_1 (grey_mydesign_22)          7.25e-04 9.87e-05   25.581 8.24e-04   0.0
+      gc_0 (grey_mydesign_23)          7.38e-04 1.00e-04   25.581 8.38e-04   0.0
+    s4 (ks_4)                          4.36e-02 1.57e-02 4.87e+03 5.93e-02   1.4
+      bc_24 (black_mydesign_17)        5.66e-04 1.81e-04   87.123 7.47e-04   0.0
+      bc_23 (black_mydesign_18)        4.74e-04 1.50e-04   87.123 6.24e-04   0.0
+      bc_22 (black_mydesign_19)        4.13e-04 1.26e-04   87.123 5.39e-04   0.0
+      bc_21 (black_mydesign_20)        5.43e-04 1.62e-04   87.123 7.05e-04   0.0
+      bc_20 (black_mydesign_21)        8.19e-04 2.65e-04  134.831 1.08e-03   0.0
+      bc_19 (black_mydesign_22)        9.24e-04 2.96e-04  134.831 1.22e-03   0.0
+      bc_18 (black_mydesign_23)        8.96e-04 2.87e-04  134.831 1.18e-03   0.0
+      bc_17 (black_mydesign_24)        1.02e-03 3.23e-04  134.831 1.34e-03   0.0
+      bc_16 (black_mydesign_25)        1.49e-03 3.28e-04  134.831 1.82e-03   0.0
+      bc_15 (black_mydesign_26)        1.53e-03 3.35e-04  134.831 1.87e-03   0.0
+      bc_14 (black_mydesign_27)        1.52e-03 3.34e-04  134.831 1.85e-03   0.0
+      bc_13 (black_mydesign_28)        1.52e-03 3.35e-04  134.831 1.85e-03   0.0
+      bc_12 (black_mydesign_29)        1.57e-03 3.45e-04  134.831 1.91e-03   0.0
+      bc_11 (black_mydesign_30)        1.55e-03 3.42e-04  134.831 1.90e-03   0.0
+      bc_10 (black_mydesign_31)        1.55e-03 3.39e-04  134.831 1.89e-03   0.0
+      bc_9 (black_mydesign_32)         1.55e-03 3.40e-04  134.831 1.89e-03   0.0
+      bc_8 (black_mydesign_33)         1.52e-03 3.37e-04  134.831 1.86e-03   0.0
+      bc_7 (black_mydesign_34)         1.49e-03 3.29e-04  134.831 1.82e-03   0.0
+      bc_6 (black_mydesign_35)         1.44e-03 3.18e-04  134.831 1.76e-03   0.0
+      bc_5 (black_mydesign_36)         1.33e-03 2.96e-04  134.831 1.62e-03   0.0
+      bc_4 (black_mydesign_37)         1.19e-03 2.68e-04  134.831 1.46e-03   0.0
+      bc_3 (black_mydesign_38)         1.18e-03 2.65e-04  134.831 1.45e-03   0.0
+      bc_2 (black_mydesign_39)         9.27e-04 2.19e-04  134.831 1.15e-03   0.0
+      bc_1 (black_mydesign_40)         9.16e-04 2.14e-04  134.831 1.13e-03   0.0
+      bc_0 (black_mydesign_41)         9.23e-04 2.14e-04  134.831 1.14e-03   0.0
+      gc_3 (grey_mydesign_24)          7.49e-04 1.50e-04   42.819 8.99e-04   0.0
+      gc_2 (grey_mydesign_25)          5.49e-04 7.47e-05   25.581 6.24e-04   0.0
+      gc_1 (grey_mydesign_26)          5.13e-04 6.99e-05   25.581 5.83e-04   0.0
+      gc_0 (grey_mydesign_27)          4.31e-04 5.79e-05   25.581 4.89e-04   0.0
+    s3 (ks_3)                          6.12e-02 2.21e-02 5.30e+03 8.33e-02   2.0
+      bc_28 (black_mydesign_42)        8.95e-04 3.09e-04   87.123 1.20e-03   0.0
+      bc_27 (black_mydesign_43)        7.15e-04 2.49e-04   87.123 9.65e-04   0.0
+      bc_26 (black_mydesign_44)        1.07e-03 3.75e-04  134.831 1.45e-03   0.0
+      bc_25 (black_mydesign_45)        1.21e-03 4.18e-04  134.831 1.63e-03   0.0
+      bc_24 (black_mydesign_46)        1.57e-03 4.36e-04  134.831 2.01e-03   0.0
+      bc_23 (black_mydesign_47)        1.80e-03 4.87e-04  134.831 2.29e-03   0.1
+      bc_22 (black_mydesign_48)        1.76e-03 4.87e-04  134.831 2.25e-03   0.1
+      bc_21 (black_mydesign_49)        1.99e-03 5.35e-04  134.831 2.53e-03   0.1
+      bc_20 (black_mydesign_50)        2.06e-03 5.46e-04  134.831 2.60e-03   0.1
+      bc_19 (black_mydesign_51)        2.12e-03 5.58e-04  134.831 2.67e-03   0.1
+      bc_18 (black_mydesign_52)        2.12e-03 5.67e-04  134.831 2.69e-03   0.1
+      bc_17 (black_mydesign_53)        2.12e-03 5.66e-04  134.831 2.68e-03   0.1
+      bc_16 (black_mydesign_54)        2.19e-03 5.87e-04  134.831 2.78e-03   0.1
+      bc_15 (black_mydesign_55)        2.19e-03 5.87e-04  134.831 2.77e-03   0.1
+      bc_14 (black_mydesign_56)        2.18e-03 5.81e-04  134.831 2.76e-03   0.1
+      bc_13 (black_mydesign_57)        2.19e-03 5.86e-04  134.831 2.78e-03   0.1
+      bc_12 (black_mydesign_58)        2.16e-03 5.80e-04  134.831 2.74e-03   0.1
+      bc_11 (black_mydesign_59)        2.13e-03 5.70e-04  134.831 2.70e-03   0.1
+      bc_10 (black_mydesign_60)        2.08e-03 5.59e-04  134.831 2.64e-03   0.1
+      bc_9 (black_mydesign_61)         1.93e-03 5.27e-04  134.831 2.46e-03   0.1
+      bc_8 (black_mydesign_62)         1.79e-03 5.00e-04  134.831 2.29e-03   0.1
+      bc_7 (black_mydesign_63)         1.78e-03 4.93e-04  134.831 2.27e-03   0.1
+      bc_6 (black_mydesign_64)         1.52e-03 4.40e-04  134.831 1.96e-03   0.0
+      bc_5 (black_mydesign_65)         1.50e-03 4.32e-04  134.831 1.94e-03   0.0
+      bc_4 (black_mydesign_66)         1.48e-03 4.21e-04  134.831 1.90e-03   0.0
+      bc_3 (black_mydesign_67)         1.45e-03 4.04e-04  134.831 1.86e-03   0.0
+      bc_2 (black_mydesign_68)         1.13e-03 3.48e-04  134.831 1.48e-03   0.0
+      bc_1 (black_mydesign_69)         1.02e-03 3.07e-04  134.831 1.33e-03   0.0
+      bc_0 (black_mydesign_70)         4.66e-04 8.23e-05   69.885 5.48e-04   0.0
+      gc_1 (grey_mydesign_28)          2.35e-04 3.15e-05   25.581 2.66e-04   0.0
+    s2 (ks_2)                          9.63e-02 3.51e-02 6.31e+03    0.131   3.2
+      bc_30 (black_mydesign_71)        1.32e-03 4.77e-04  134.831 1.80e-03   0.0
+      bc_29 (black_mydesign_72)        7.77e-04 2.70e-04   87.123 1.05e-03   0.0
+      bc_28 (black_mydesign_73)        1.46e-03 4.88e-04  134.831 1.95e-03   0.0
+      bc_27 (black_mydesign_74)        1.11e-03 3.08e-04   87.123 1.42e-03   0.0
+      bc_26 (black_mydesign_75)        1.97e-03 6.24e-04  134.831 2.60e-03   0.1
+      bc_25 (black_mydesign_76)        1.49e-03 3.92e-04   87.123 1.88e-03   0.0
+      bc_24 (black_mydesign_77)        2.17e-03 6.91e-04  134.831 2.86e-03   0.1
+      bc_23 (black_mydesign_78)        1.62e-03 4.33e-04   87.123 2.05e-03   0.0
+      bc_22 (black_mydesign_79)        2.61e-03 7.95e-04  134.831 3.41e-03   0.1
+      bc_21 (black_mydesign_80)        1.82e-03 4.72e-04   87.123 2.29e-03   0.1
+      bc_20 (black_mydesign_81)        1.77e-03 4.63e-04   87.123 2.24e-03   0.1
+      bc_19 (black_mydesign_82)        2.69e-03 8.26e-04  134.831 3.52e-03   0.1
+      bc_18 (black_mydesign_83)        1.84e-03 4.95e-04   87.123 2.33e-03   0.1
+      bc_17 (black_mydesign_84)        2.76e-03 8.13e-04  134.831 3.57e-03   0.1
+      bc_16 (black_mydesign_85)        1.82e-03 4.85e-04   87.123 2.30e-03   0.1
+      bc_15 (black_mydesign_86)        2.81e-03 8.65e-04  134.831 3.68e-03   0.1
+      bc_14 (black_mydesign_87)        1.78e-03 4.75e-04   87.123 2.25e-03   0.1
+      bc_13 (black_mydesign_88)        2.76e-03 8.52e-04  134.831 3.61e-03   0.1
+      bc_12 (black_mydesign_89)        1.75e-03 4.68e-04   87.123 2.22e-03   0.1
+      bc_11 (black_mydesign_90)        2.53e-03 7.92e-04  134.831 3.32e-03   0.1
+      bc_10 (black_mydesign_91)        1.48e-03 4.13e-04   87.123 1.89e-03   0.0
+      bc_9 (black_mydesign_92)         2.39e-03 7.58e-04  134.831 3.15e-03   0.1
+      bc_8 (black_mydesign_93)         1.17e-03 3.42e-04   87.123 1.51e-03   0.0
+      bc_7 (black_mydesign_94)         2.05e-03 6.76e-04  134.831 2.73e-03   0.1
+      bc_6 (black_mydesign_95)         1.21e-03 3.45e-04   87.123 1.55e-03   0.0
+      bc_5 (black_mydesign_96)         1.97e-03 6.31e-04  134.831 2.60e-03   0.1
+      bc_4 (black_mydesign_97)         9.47e-04 2.78e-04   87.123 1.22e-03   0.0
+      bc_3 (black_mydesign_98)         1.62e-03 5.31e-04  134.831 2.15e-03   0.1
+      bc_2 (black_mydesign_99)         7.98e-04 2.31e-04   87.123 1.03e-03   0.0
+      bc_1 (black_mydesign_100)        3.82e-04 1.41e-04   69.885 5.24e-04   0.0
+      bc_0 (black_mydesign_101)        8.65e-05 6.49e-05   44.304 1.51e-04   0.0
+    s1 (ks_1)                          5.38e-02 1.73e-02 4.52e+03 7.11e-02   1.7
+      pg_31 (pg_mydesign_0)            6.91e-04 2.73e-04  122.585 9.64e-04   0.0
+      pg_30 (pg_mydesign_1)            8.50e-04 3.47e-04  170.294 1.20e-03   0.0
+      pg_29 (pg_mydesign_2)            8.35e-04 3.19e-04  148.167 1.15e-03   0.0
+      pg_28 (pg_mydesign_3)            1.49e-03 4.67e-04  148.167 1.96e-03   0.0
+      pg_27 (pg_mydesign_4)            1.37e-03 4.61e-04  148.167 1.84e-03   0.0
+      pg_26 (pg_mydesign_5)            2.12e-03 6.19e-04  148.167 2.74e-03   0.1
+      pg_25 (pg_mydesign_6)            1.56e-03 5.22e-04  148.167 2.08e-03   0.1
+      pg_24 (pg_mydesign_7)            2.02e-03 6.24e-04  148.167 2.65e-03   0.1
+      pg_23 (pg_mydesign_8)            2.24e-03 6.76e-04  148.167 2.92e-03   0.1
+      pg_22 (pg_mydesign_9)            2.47e-03 7.23e-04  148.167 3.20e-03   0.1
+      pg_21 (pg_mydesign_10)           2.08e-03 8.05e-04  170.294 2.89e-03   0.1
+      pg_20 (pg_mydesign_11)           2.33e-03 7.07e-04  148.167 3.04e-03   0.1
+      pg_19 (pg_mydesign_12)           2.42e-03 7.28e-04  148.167 3.15e-03   0.1
+      pg_18 (pg_mydesign_13)           2.34e-03 7.17e-04  148.167 3.06e-03   0.1
+      pg_17 (pg_mydesign_14)           2.34e-03 7.20e-04  148.167 3.06e-03   0.1
+      pg_16 (pg_mydesign_15)           2.45e-03 7.45e-04  148.167 3.19e-03   0.1
+      pg_15 (pg_mydesign_16)           2.32e-03 7.17e-04  148.167 3.03e-03   0.1
+      pg_14 (pg_mydesign_17)           2.34e-03 7.20e-04  148.167 3.06e-03   0.1
+      pg_13 (pg_mydesign_18)           2.31e-03 7.10e-04  148.167 3.02e-03   0.1
+      pg_12 (pg_mydesign_19)           2.17e-03 6.79e-04  148.167 2.85e-03   0.1
+      pg_11 (pg_mydesign_20)           1.80e-03 6.01e-04  148.167 2.40e-03   0.1
+      pg_10 (pg_mydesign_21)           2.09e-03 6.59e-04  148.167 2.75e-03   0.1
+      pg_9 (pg_mydesign_22)            1.45e-03 5.29e-04  148.167 1.98e-03   0.0
+      pg_8 (pg_mydesign_23)            1.55e-03 5.40e-04  148.167 2.09e-03   0.1
+      pg_7 (pg_mydesign_24)            1.45e-03 4.96e-04  148.167 1.94e-03   0.0
+      pg_6 (pg_mydesign_25)            1.71e-03 5.41e-04  148.167 2.25e-03   0.1
+      pg_5 (pg_mydesign_26)            1.20e-03 4.27e-04  148.167 1.63e-03   0.0
+      pg_4 (pg_mydesign_27)            1.23e-03 4.15e-04  148.167 1.65e-03   0.0
+      pg_3 (pg_mydesign_28)            1.19e-03 3.52e-04  129.444 1.54e-03   0.0
+      pg_2 (pg_mydesign_29)            9.07e-04 2.86e-04  129.444 1.19e-03   0.0
+      pg_1 (pg_mydesign_30)            2.02e-04 1.40e-04   47.708 3.42e-04   0.0
+      pg_0 (pg_mydesign_31)            2.42e-04 8.52e-05   47.708 3.27e-04   0.0
+  u_WallaceTree_top (WallaceTree_top)     0.437    0.155 3.47e+04    0.592  14.4
+    gen_halfAdder[4].u_HalfAdder (HalfAdder_mydesign_6)
+                                       1.94e-04 1.76e-04  122.585 3.70e-04   0.0
+    gen_halfAdder[3].u_HalfAdder (HalfAdder_mydesign_7)
+                                       5.11e-04 3.22e-04  122.585 8.33e-04   0.0
+    gen_halfAdder[2].u_HalfAdder (HalfAdder_mydesign_8)
+                                       5.30e-04 3.55e-04  122.585 8.84e-04   0.0
+    gen_halfAdder[1].u_HalfAdder (HalfAdder_mydesign_9)
+                                       5.51e-04 3.91e-04  122.585 9.42e-04   0.0
+    gen_halfAdder[0].u_HalfAdder (HalfAdder_mydesign_10)
+                                       1.01e-03 5.39e-04  122.585 1.54e-03   0.0
+    u_WallaceTree_2 (WallaceTree_mydesign_0)
+                                          0.160 5.98e-02 1.13e+04    0.220   5.3
+      u_HalfAdder_1 (HalfAdder_mydesign_0)
+                                       9.29e-04 5.49e-04  122.585 1.48e-03   0.0
+      u_CSA32_1 (CSA32_mydesign_0)     8.32e-04 1.88e-03  376.917 2.71e-03   0.1
+      gen_CSA42[14].u_CSA42 (CSA42_mydesign_0)
+                                       2.51e-03 2.60e-03  499.502 5.11e-03   0.1
+      gen_CSA42[13].u_CSA42 (CSA42_mydesign_1)
+                                       1.06e-02 3.40e-03  705.642 1.40e-02   0.3
+      gen_CSA42[12].u_CSA42 (CSA42_mydesign_2)
+                                       1.10e-02 3.62e-03  705.642 1.46e-02   0.4
+      gen_CSA42[11].u_CSA42 (CSA42_mydesign_3)
+                                       1.14e-02 3.80e-03  740.559 1.52e-02   0.4
+      gen_CSA42[10].u_CSA42 (CSA42_mydesign_4)
+                                       1.19e-02 3.89e-03  705.642 1.58e-02   0.4
+      gen_CSA42[9].u_CSA42 (CSA42_mydesign_5)
+                                       1.21e-02 3.96e-03  705.642 1.61e-02   0.4
+      gen_CSA42[8].u_CSA42 (CSA42_mydesign_6)
+                                       1.23e-02 4.02e-03  705.642 1.63e-02   0.4
+      gen_CSA42[7].u_CSA42 (CSA42_mydesign_7)
+                                       1.24e-02 4.06e-03  705.642 1.64e-02   0.4
+      gen_CSA42[6].u_CSA42 (CSA42_mydesign_8)
+                                       1.23e-02 4.03e-03  705.642 1.64e-02   0.4
+      gen_CSA42[5].u_CSA42 (CSA42_mydesign_9)
+                                       1.20e-02 3.94e-03  705.642 1.60e-02   0.4
+      gen_CSA42[4].u_CSA42 (CSA42_mydesign_10)
+                                       1.18e-02 3.85e-03  705.642 1.57e-02   0.4
+      gen_CSA42[3].u_CSA42 (CSA42_mydesign_11)
+                                       1.13e-02 3.66e-03  705.642 1.49e-02   0.4
+      gen_CSA42[2].u_CSA42 (CSA42_mydesign_12)
+                                       1.10e-02 3.61e-03  705.642 1.46e-02   0.4
+      gen_CSA42[1].u_CSA42 (CSA42_mydesign_13)
+                                       1.07e-02 3.46e-03  705.642 1.42e-02   0.3
+      gen_CSA42[0].u_CSA42 (CSA42_mydesign_14)
+                                       2.49e-03 2.51e-03  499.502 5.00e-03   0.1
+      u_CSA32_0 (CSA32_mydesign_1)     8.30e-04 2.22e-03  376.917 3.05e-03   0.1
+      u_HalfAdder_0 (HalfAdder_mydesign_1)
+                                       8.84e-04 5.69e-04  122.585 1.45e-03   0.0
+    u_WallaceTree_1 (WallaceTree_mydesign_1)
+                                          0.135 4.63e-02 1.12e+04    0.181   4.4
+      u_HalfAdder_1 (HalfAdder_mydesign_2)
+                                       1.69e-03 4.63e-04  148.167 2.15e-03   0.1
+      u_CSA32_1 (CSA32_mydesign_2)     1.16e-03 1.29e-03  376.917 2.44e-03   0.1
+      gen_CSA42[14].u_CSA42 (CSA42_mydesign_15)
+                                       2.80e-03 1.92e-03  525.083 4.71e-03   0.1
+      gen_CSA42[13].u_CSA42 (CSA42_mydesign_16)
+                                       2.79e-03 2.13e-03  547.210 4.92e-03   0.1
+      gen_CSA42[12].u_CSA42 (CSA42_mydesign_17)
+                                       9.37e-03 2.83e-03  705.642 1.22e-02   0.3
+      gen_CSA42[11].u_CSA42 (CSA42_mydesign_18)
+                                       9.68e-03 2.97e-03  705.642 1.27e-02   0.3
+      gen_CSA42[10].u_CSA42 (CSA42_mydesign_19)
+                                       9.43e-03 2.93e-03  705.642 1.24e-02   0.3
+      gen_CSA42[9].u_CSA42 (CSA42_mydesign_20)
+                                       1.00e-02 3.02e-03  705.642 1.30e-02   0.3
+      gen_CSA42[8].u_CSA42 (CSA42_mydesign_21)
+                                       1.03e-02 3.03e-03  705.642 1.33e-02   0.3
+      gen_CSA42[7].u_CSA42 (CSA42_mydesign_22)
+                                       1.02e-02 3.01e-03  705.642 1.33e-02   0.3
+      gen_CSA42[6].u_CSA42 (CSA42_mydesign_23)
+                                       1.03e-02 3.02e-03  705.642 1.33e-02   0.3
+      gen_CSA42[5].u_CSA42 (CSA42_mydesign_24)
+                                       1.03e-02 3.02e-03  705.642 1.33e-02   0.3
+      gen_CSA42[4].u_CSA42 (CSA42_mydesign_25)
+                                       1.03e-02 3.02e-03  705.642 1.33e-02   0.3
+      gen_CSA42[3].u_CSA42 (CSA42_mydesign_26)
+                                       1.03e-02 3.03e-03  705.642 1.33e-02   0.3
+      gen_CSA42[2].u_CSA42 (CSA42_mydesign_27)
+                                       1.04e-02 3.05e-03  705.642 1.34e-02   0.3
+      gen_CSA42[1].u_CSA42 (CSA42_mydesign_28)
+                                       1.01e-02 2.95e-03  705.642 1.31e-02   0.3
+      gen_CSA42[0].u_CSA42 (CSA42_mydesign_29)
+                                       2.92e-03 2.32e-03  547.210 5.24e-03   0.1
+      u_CSA32_0 (CSA32_mydesign_3)     1.37e-03 1.68e-03  376.917 3.04e-03   0.1
+      u_HalfAdder_0 (HalfAdder_mydesign_3)
+                                       1.31e-03 5.19e-04  170.294 1.83e-03   0.0
+    u_WallaceTree_0 (WallaceTree_mydesign_2)
+                                          0.138 4.65e-02 1.12e+04    0.184   4.5
+      u_HalfAdder_1 (HalfAdder_mydesign_4)
+                                       1.72e-03 4.71e-04  148.167 2.19e-03   0.1
+      u_CSA32_1 (CSA32_mydesign_4)     1.22e-03 1.31e-03  376.917 2.53e-03   0.1
+      gen_CSA42[14].u_CSA42 (CSA42_mydesign_30)
+                                       2.25e-03 1.89e-03  499.502 4.14e-03   0.1
+      gen_CSA42[13].u_CSA42 (CSA42_mydesign_31)
+                                       9.64e-03 2.88e-03  705.642 1.25e-02   0.3
+      gen_CSA42[12].u_CSA42 (CSA42_mydesign_32)
+                                       9.50e-03 2.81e-03  705.642 1.23e-02   0.3
+      gen_CSA42[11].u_CSA42 (CSA42_mydesign_33)
+                                       9.69e-03 2.88e-03  705.642 1.26e-02   0.3
+      gen_CSA42[10].u_CSA42 (CSA42_mydesign_34)
+                                       9.97e-03 2.96e-03  705.642 1.29e-02   0.3
+      gen_CSA42[9].u_CSA42 (CSA42_mydesign_35)
+                                       1.02e-02 3.02e-03  705.642 1.32e-02   0.3
+      gen_CSA42[8].u_CSA42 (CSA42_mydesign_36)
+                                       1.02e-02 3.02e-03  705.642 1.32e-02   0.3
+      gen_CSA42[7].u_CSA42 (CSA42_mydesign_37)
+                                       1.01e-02 2.99e-03  705.642 1.30e-02   0.3
+      gen_CSA42[6].u_CSA42 (CSA42_mydesign_38)
+                                       1.02e-02 3.01e-03  705.642 1.32e-02   0.3
+      gen_CSA42[5].u_CSA42 (CSA42_mydesign_39)
+                                       1.02e-02 3.02e-03  705.642 1.32e-02   0.3
+      gen_CSA42[4].u_CSA42 (CSA42_mydesign_40)
+                                       1.02e-02 3.00e-03  705.642 1.32e-02   0.3
+      gen_CSA42[3].u_CSA42 (CSA42_mydesign_41)
+                                       9.80e-03 3.03e-03  705.642 1.28e-02   0.3
+      gen_CSA42[2].u_CSA42 (CSA42_mydesign_42)
+                                       1.01e-02 3.02e-03  705.642 1.31e-02   0.3
+      gen_CSA42[1].u_CSA42 (CSA42_mydesign_43)
+                                       9.44e-03 2.88e-03  705.642 1.23e-02   0.3
+      gen_CSA42[0].u_CSA42 (CSA42_mydesign_44)
+                                       2.06e-03 2.18e-03  499.502 4.23e-03   0.1
+      u_CSA32_0 (CSA32_mydesign_5)     6.58e-04 1.63e-03  376.917 2.28e-03   0.1
+      u_HalfAdder_0 (HalfAdder_mydesign_5)
+                                       6.26e-04 4.06e-04  122.585 1.03e-03   0.0
+  u_PP_top (PP_top)                       1.019    0.259 5.22e+04    1.278  31.0
+    gen_PP_tmp[7].u_Caculate (CaculateE_mydesign_0)
+                                       8.06e-04 3.42e-04   96.570 1.15e-03   0.0
+    gen_PP_tmp[7].u_PPUint (PPUnit_mydesign_0)
+                                          0.118 2.82e-02 5.12e+03    0.146   3.5
+      u_Inverse17 (Inverse17_mydesign_0)
+                                       2.79e-02 8.20e-03 1.37e+03 3.61e-02   0.9
+    gen_PP_tmp[7].U_BoothEndecode (BoothEndecode_mydesign_0)
+                                       6.29e-03 1.31e-03  329.511 7.59e-03   0.2
+    gen_PP_tmp[6].u_Caculate (CaculateE_mydesign_1)
+                                       7.95e-04 3.37e-04   96.570 1.13e-03   0.0
+    gen_PP_tmp[6].u_PPUint (PPUnit_mydesign_1)
+                                          0.118 2.79e-02 5.08e+03    0.146   3.5
+      u_Inverse17 (Inverse17_mydesign_1)
+                                       2.81e-02 8.01e-03 1.32e+03 3.61e-02   0.9
+    gen_PP_tmp[6].U_BoothEndecode (BoothEndecode_mydesign_1)
+                                       5.39e-03 1.47e-03  353.162 6.86e-03   0.2
+    gen_PP_tmp[5].u_Caculate (CaculateE_mydesign_2)
+                                       8.05e-04 3.40e-04   96.570 1.14e-03   0.0
+    gen_PP_tmp[5].u_PPUint (PPUnit_mydesign_2)
+                                          0.117 2.84e-02 5.20e+03    0.145   3.5
+      u_Inverse17 (Inverse17_mydesign_2)
+                                       2.84e-02 8.41e-03 1.42e+03 3.68e-02   0.9
+    gen_PP_tmp[5].U_BoothEndecode (BoothEndecode_mydesign_2)
+                                       5.37e-03 1.47e-03  353.162 6.84e-03   0.2
+    gen_PP_tmp[4].u_Caculate (CaculateE_mydesign_3)
+                                       8.09e-04 3.42e-04   96.570 1.15e-03   0.0
+    gen_PP_tmp[4].u_PPUint (PPUnit_mydesign_3)
+                                          0.118 2.89e-02 5.20e+03    0.147   3.6
+      u_Inverse17 (Inverse17_mydesign_3)
+                                       2.86e-02 8.29e-03 1.36e+03 3.69e-02   0.9
+    gen_PP_tmp[4].U_BoothEndecode (BoothEndecode_mydesign_3)
+                                       5.63e-03 1.34e-03  325.029 6.97e-03   0.2
+    gen_PP_tmp[3].u_Caculate (CaculateE_mydesign_4)
+                                       8.26e-04 3.49e-04   96.570 1.18e-03   0.0
+    gen_PP_tmp[3].u_PPUint (PPUnit_mydesign_4)
+                                          0.118 2.91e-02 5.20e+03    0.148   3.6
+      u_Inverse17 (Inverse17_mydesign_4)
+                                       2.83e-02 8.16e-03 1.35e+03 3.65e-02   0.9
+    gen_PP_tmp[3].U_BoothEndecode (BoothEndecode_mydesign_4)
+                                       5.74e-03 1.56e-03  370.595 7.31e-03   0.2
+    gen_PP_tmp[2].u_Caculate (CaculateE_mydesign_5)
+                                       8.05e-04 3.42e-04   96.570 1.15e-03   0.0
+    gen_PP_tmp[2].u_PPUint (PPUnit_mydesign_5)
+                                          0.119 2.90e-02 5.22e+03    0.148   3.6
+      u_Inverse17 (Inverse17_mydesign_5)
+                                       2.84e-02 8.68e-03 1.44e+03 3.71e-02   0.9
+    gen_PP_tmp[2].U_BoothEndecode (BoothEndecode_mydesign_5)
+                                       5.30e-03 1.54e-03  366.505 6.84e-03   0.2
+    gen_PP_tmp[1].u_Caculate (CaculateE_mydesign_6)
+                                       8.07e-04 3.39e-04   96.570 1.15e-03   0.0
+    gen_PP_tmp[1].u_PPUint (PPUnit_mydesign_6)
+                                          0.118 2.93e-02 5.26e+03    0.147   3.6
+      u_Inverse17 (Inverse17_mydesign_6)
+                                       2.80e-02 7.81e-03 1.30e+03 3.58e-02   0.9
+    gen_PP_tmp[1].U_BoothEndecode (BoothEndecode_mydesign_6)
+                                       5.56e-03 1.52e-03  362.988 7.08e-03   0.2
+    gen_PP_tmp[0].u_Caculate (CaculateE_mydesign_7)
+                                       6.96e-04 2.15e-04   64.090 9.11e-04   0.0
+    gen_PP_tmp[0].u_PPUint (PPUnit_mydesign_7)
+                                       8.59e-02 2.24e-02 5.90e+03    0.108   2.6
+      u_Inverse17 (Inverse17_mydesign_7)
+                                       2.17e-02 6.42e-03 1.40e+03 2.81e-02   0.7
+    gen_PP_tmp[0].U_BoothEndecode (BoothEndecode_mydesign_7)
+                                       2.06e-03 4.51e-04  121.053 2.51e-03   0.1
+1

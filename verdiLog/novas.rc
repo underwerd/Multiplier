@@ -113,6 +113,7 @@ Branch = 1
 IfShowModule = {TRUE, FALSE}
 [DisabledMessages]
 version = Verdi_O-2018.09-SP2
+50528765 = disabled
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -220,9 +221,12 @@ Selection-LineWidth = 1
 [FSM_Dlg-Print]
 Orientation = Landscape
 [FileBrowser]
+nWaveOpenFsdbDirHistory = "\"/home/ICer/ic_prjs/multiplier/tb_Multiplier_dft.fsdb\""
 nWaveRestoreRCDirHistory = "\"/home/ICer/ic_prjs/multiplier/signal.rc\""
 [Form]
 version = Verdi_O-2018.09-SP2
+wave/unknownSave.fm = 126,296,520,275
+openfile.fm = 144,246,723,532
 [General]
 autoSaveSession = FALSE
 TclAutoSource = 
@@ -262,10 +266,11 @@ windowLayout = 0 0 804 500 182 214 804 148
 import_filter = *.v; *.vc; *.f
 designTreeFont = *-adobe-courier-medium-r-*-*-12-*-*-*-*-*-iso8859-*
 import_filter_vhdl = *.vhd; *.vhdl; *.f
-import_default_language = Verilog
 import_filter_verilog = *.v; *.vc; *.f
 simulation_file_type = *.fsdb;*.fsdb.gz;*.fsdb.bz2;*.ff;*.dump
 PrefetchViewableAnnot = TRUE
+import_default_language = Verilog
+import_from = source
 [Hier]
 filterTimeout = 1500
 [ImportLiberty]
@@ -372,10 +377,12 @@ saveWaveformStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-saveSigDlg = 683,419,551,386
 qWaveSignalDialog = 550,366,800,479
+importDesignForm = 371,330,715,574
 openFileDlg = 658,371,602,483
 restoreSigDlg = 683,393,551,438
+QwWarnMsgDlg = 659,617,600,250
+saveSigDlg = 683,419,551,386
 QwUserAskDlg = 798,547,324,134
 [Relationship]
 hideRecursiceNode = FALSE
@@ -653,28 +660,28 @@ DefaultLogTimeUnit = "1.000000ns"
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
+name = Message
+width = 2000
+visualIndex = 4
+isHidden = FALSE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
 name = Code
 width = 60
 visualIndex = 2
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
 name = Type
 width = 60
 visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Time
 width = 60
 visualIndex = 0
 isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
-name = Message
-width = 2000
-visualIndex = 4
-isHidden = FALSE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
 name = Severity
@@ -701,7 +708,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 550 329 800 479 164 381 390 89
-viewPort = 0 27 1920 416 204 65
+viewPort = 0 27 1920 325 204 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -972,8 +979,10 @@ curveWindow_Drag&Drop_Mode = TRUE
 hspiceIncOpenMode = TRUE
 pcSelectMode = TRUE
 hierarchyDelimiter = /
-RecentFile1 = "\"/home/ICer/ic_prjs/multiplier/signal.rc\""
+RecentFile1 = "\"/home/ICer/ic_prjs/multiplier/tb_Multiplier_p.fsdb\""
 RecentFile2 = "\"/home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb\""
+RecentFile3 = "\"/home/ICer/ic_prjs/multiplier/signal.rc\""
+RecentFile4 = "\"/home/ICer/ic_prjs/multiplier/tb_Multiplier_dft.fsdb\""
 open_file_time_range = FALSE
 value_window_aligment = Right
 signal_window_alignment = Auto
@@ -1299,7 +1308,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 27 1920 416 204 65
+viewPort = 0 27 1920 325 204 65
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]

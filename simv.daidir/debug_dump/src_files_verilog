@@ -1,8 +1,3 @@
-/home/ICer/ic_prjs/multiplier/sim/tb_Multiplier.sv
-/home/ICer/ic_prjs/multiplier/src/BoothEndecode.v
-/home/ICer/ic_prjs/multiplier/src/CLA32.v
-/home/ICer/ic_prjs/multiplier/src/Multiplier_top.v
-/home/ICer/ic_prjs/multiplier/src/Multiplier_top_dft.v
-/home/ICer/ic_prjs/multiplier/src/PPUnit.v
-/home/ICer/ic_prjs/multiplier/src/PP_top.v
-/home/ICer/ic_prjs/multiplier/src/WallaceTree_top.v
+/home/ICer/ic_prjs/multiplier/sim/tb_Multiplier_p.sv
+/home/ICer/ic_prjs/multiplier/syn/output/Multiplier_top_p.v
+/home/ic_libs/TSMC_013/verilog/tsmc13.v

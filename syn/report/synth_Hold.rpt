@@ -1,0 +1,163 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 4
+Design : Multiplier_top_p
+Version: O-2018.06-SP1
+Date   : Tue Dec  3 19:52:28 2024
+****************************************
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: PP0_r_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Carry_r_reg[2]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  PP0_r_reg[2]/CK (DFFHQXL)                               0.00       0.00 r
+  PP0_r_reg[2]/Q (DFFHQXL)                                0.26       0.26 f
+  u_WallaceTree_top/PP0[2] (WallaceTree_top)              0.00       0.26 f
+  u_WallaceTree_top/U4/Y (BUFX1)                          0.14       0.40 f
+  u_WallaceTree_top/Carry[2] (WallaceTree_top)            0.00       0.40 f
+  U551/Y (AND2XL)                                         0.17       0.57 f
+  Carry_r_reg[2]/D (DFFHQXL)                              0.00       0.57 f
+  data arrival time                                                  0.57
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  Carry_r_reg[2]/CK (DFFHQXL)                             0.00       0.20 r
+  library hold time                                       0.00       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.36
+
+
+  Startpoint: PP0_r_reg[1]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Carry_r_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  PP0_r_reg[1]/CK (DFFHQXL)                               0.00       0.00 r
+  PP0_r_reg[1]/Q (DFFHQXL)                                0.26       0.26 f
+  u_WallaceTree_top/PP0[1] (WallaceTree_top)              0.00       0.26 f
+  u_WallaceTree_top/U7/Y (BUFX1)                          0.14       0.40 f
+  u_WallaceTree_top/Carry[1] (WallaceTree_top)            0.00       0.40 f
+  U550/Y (AND2XL)                                         0.17       0.57 f
+  Carry_r_reg[1]/D (DFFHQXL)                              0.00       0.57 f
+  data arrival time                                                  0.57
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  Carry_r_reg[1]/CK (DFFHQXL)                             0.00       0.20 r
+  library hold time                                       0.00       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.36
+
+
+  Startpoint: PP0_r_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Carry_r_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  PP0_r_reg[0]/CK (DFFHQXL)                               0.00       0.00 r
+  PP0_r_reg[0]/Q (DFFHQXL)                                0.26       0.26 f
+  u_WallaceTree_top/PP0[0] (WallaceTree_top)              0.00       0.26 f
+  u_WallaceTree_top/U6/Y (BUFX1)                          0.14       0.40 f
+  u_WallaceTree_top/Carry[0] (WallaceTree_top)            0.00       0.40 f
+  U549/Y (AND2XL)                                         0.17       0.57 f
+  Carry_r_reg[0]/D (DFFHQXL)                              0.00       0.57 f
+  data arrival time                                                  0.57
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  Carry_r_reg[0]/CK (DFFHQXL)                             0.00       0.20 r
+  library hold time                                       0.00       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.36
+
+
+  Startpoint: PP0_r_reg[3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Carry_r_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Multiplier_top_p   smic18_wl10           typical
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  PP0_r_reg[3]/CK (DFFHQXL)                               0.00       0.00 r
+  PP0_r_reg[3]/Q (DFFHQXL)                                0.26       0.26 f
+  u_WallaceTree_top/PP0[3] (WallaceTree_top)              0.00       0.26 f
+  u_WallaceTree_top/U3/Y (BUFX1)                          0.14       0.40 f
+  u_WallaceTree_top/Carry[3] (WallaceTree_top)            0.00       0.40 f
+  U554/Y (AND2XL)                                         0.17       0.57 f
+  Carry_r_reg[3]/D (DFFHQXL)                              0.00       0.57 f
+  data arrival time                                                  0.57
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.20       0.20
+  Carry_r_reg[3]/CK (DFFHQXL)                             0.00       0.20 r
+  library hold time                                       0.00       0.20
+  data required time                                                 0.20
+  --------------------------------------------------------------------------
+  data required time                                                 0.20
+  data arrival time                                                 -0.57
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.36
+
+
+1

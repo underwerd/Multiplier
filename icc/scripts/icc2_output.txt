@@ -1,0 +1,290 @@
+
+set DESIGN_NAME "Multiplier_top_p"
+Multiplier_top_p
+set lib_dir "home/ic_libs/smic180"
+home/ic_libs/smic180
+#set search_path "/home/ic_libs/smic180/digital/sc/synopsys/;/home/ic_libs/smic180/itf_tluplus/;../milkyway/"     #??????
+#set search_path {"/home/ic_libs/smic180/digital/sc/synopsys/" "/home/ic_libs/smic180/itf_tluplus/" "../milkyway/"}  #??????
+set search_path [list "/home/ic_libs/smic180/digital/sc/synopsys/" "/home/ic_libs/smic180/itf_tluplus/" "../milkyway/"]
+/home/ic_libs/smic180/digital/sc/synopsys/ /home/ic_libs/smic180/itf_tluplus/ ../milkyway/
+set target_library "typical.db"   
+typical.db
+set link_library "* $target_library"
+* typical.db
+set symbol_library " smic18.sdb "   
+ smic18.sdb 
+#create_workspace -flow normal -technology /home/ic_libs/smic180/digital/sc/apollo/tf/smic18_4lm.tf TECH_ONLY_NDM
+#read_parasitic_tech -tlup /home/ic_libs/smic180/itf_tluplus/smiclog018_4lm_cell_max.tluplus -name MAX_TLUP
+#read_parasitic_tech -tlup /home/ic_libs/smic180/itf_tluplus/smiclog018_4lm_cell_min.tluplus -name MIN_TLUP
+#check_workspace
+#commit_workspace -output ../milkyway/tech_lib.ndm
+create_lib ../milkyway/lib.ndb              -technology /home/ic_libs/smic180/digital/sc/apollo/tf/smic18_4lm.tf               -ref_libs  ../milkyway/tech_lib.ndm     
+Warning: smic18_4lm.tf line 467, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 481, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 495, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 509, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 523, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 537, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 551, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 565, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 579, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 593, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 607, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 621, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 635, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 649, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 663, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 677, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 691, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 705, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 719, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 733, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 747, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 761, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 775, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 789, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 803, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 817, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 831, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 845, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 859, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 873, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 887, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 901, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 915, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 929, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 943, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 957, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 971, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 985, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 999, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1013, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1027, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1041, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1055, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1069, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1083, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1097, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1111, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1125, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1139, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1153, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1167, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1181, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1195, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1209, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1223, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1237, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1251, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1265, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1279, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1293, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1307, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1321, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1335, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1349, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1363, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1377, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1391, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1405, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1419, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1433, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1447, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1461, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1475, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1489, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1503, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1517, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1531, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1545, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1559, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1573, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1587, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1601, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1615, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1629, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1643, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1657, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1671, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1685, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1699, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1713, unsupported technology file section 'CapTable'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1727, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1745, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1763, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1781, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1799, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1817, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1835, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1853, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1871, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1889, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1907, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1925, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1943, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1961, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1979, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 1997, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2015, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2033, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2051, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2069, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2087, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2105, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2123, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2141, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2159, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2177, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2195, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2213, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2231, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2249, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2267, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2285, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2303, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2321, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: smic18_4lm.tf line 2339, unsupported technology file section 'CapModel'. It will be ignored. (TECH-001)
+Warning: Cut layer 'VIA12' has a non-cross primary default ContactCode 'via1'. (line 374) (TECH-083w)
+Warning: Cut layer 'VIA23' has a non-cross primary default ContactCode 'via2'. (line 392) (TECH-083w)
+Information: Loading technology file '/home/ic_libs/smic180/digital/sc/apollo/tf/smic18_4lm.tf' (FILE-007)
+... run icc2_lm_shell to group libraries.
+.......
+... 2 libraries to build.
+... run icc2_lm_shell to build cell library: typical.ndm (1/2)
+...............................................................................
+.......................................
+... run icc2_lm_shell to build cell library: typical_physical_only.ndm (2/2)
+.......
+Information: Successfully built 2 reference libraries: typical.ndm typical_physical_only.ndm. (LIB-093)
+{lib.ndb}
+import_designs "../syn/outputs/Multiplier_top_p.v"  -format verilog -top Multiplier_top_p  
+Error: unknown command 'import_designs' (CMD-005)
+Information: script '/home/ICer/ic_prjs/multiplier/icc/scripts/icc.tcl'
+        stopped at line 23 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"import_designs "../syn/outputs/Multiplier_top_p.v"  -format verilog -top Multiplier_top_p  "
+ -- End Extended Error Info
+icc2_shell> read_verilog "../syn/outputs/Multiplier_top_p.v"  -format verilog -top Multiplier_top_p
+Error: unknown option '-format' (CMD-010)
+Error: extra positional option 'verilog' (CMD-012)
+icc2_shell> read_verilog "../syn/outputs/Multiplier_top_p.v"  -top Multiplier_top_p
+Error: File '../syn/outputs/Multiplier_top_p.v' cannot be found using search_path of: '/home/ic_libs/smic180/digital/sc/synopsys/ /home/ic_libs/smic180/itf_tluplus/ ../milkyway/'. (FILE-002)
+icc2_shell> read_verilog "../syn/output/Multiplier_top_p.v"  -top Multiplier_top_p
+Error: File '../syn/output/Multiplier_top_p.v' cannot be found using search_path of: '/home/ic_libs/smic180/digital/sc/synopsys/ /home/ic_libs/smic180/itf_tluplus/ ../milkyway/'. (FILE-002)
+icc2_shell> read_verilog "../../syn/output/Multiplier_top_p.v"  -top Multiplier_top_p
+Information: Reading Verilog into new design 'Multiplier_top_p' in library 'lib.ndb'. (VR-012)
+Loading verilog file '/home/ICer/ic_prjs/multiplier/syn/output/Multiplier_top_p.v'
+Number of modules read: 271
+Top level ports: 66
+Total ports in all modules: 3839
+Total nets in all modules: 7782
+Total instances in all modules: 4234
+Elapsed = 00:00:00.07, CPU = 00:00:00.04
+1
+icc2_shell> link_block
+Using libraries: lib.ndb typical typical_physical_only
+Linking block lib.ndb:Multiplier_top_p.design
+Information: User units loaded from library 'typical' (LNK-040)
+Design 'Multiplier_top_p' was successfully linked.
+1
+icc2_shell> current_design Multiplier_top_p
+{lib.ndb:Multiplier_top_p.design}
+icc2_shell> report_tlu_plus_files  > ../report/report_tlu_plus.rpt
+Error: unknown command 'report_tlu_plus_files' (CMD-005)
+icc2_shell> remove_sdc
+Removing all constraints...
+Removing any SDC constraints from scenario default
+Removing any SDC constraints from mode default
+Removing any SDC constraints from corner default
+Removing any SDC constraints from design
+1
+icc2_shell> read_sdc ../../syn/output/Multiplier_top_p.sdc
+Information: Loading SDC version 2.1 file '/home/ICer/ic_prjs/multiplier/syn/output/Multiplier_top_p.sdc' (FILE-007)
+Warning: Constraint 'set_wire_load_model' is not supported by icc2. (SDC-3)
+Warning: The 'set_max_fanout' command is not supported in this program.  The command will be ignored. (CSTR-011)
+Warning: Constraint 'set_wire_load_selection_group' is not supported by icc2. (SDC-3)
+Warning: Constraint 'set_max_area' is not supported by icc2. (SDC-3)
+Begin building search trees for block lib.ndb:Multiplier_top_p.design
+Done building search trees for block lib.ndb:Multiplier_top_p.design (time 0s)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+
+
+Summary of unsupported constraints:
+Information: Ignored 1 unsupported 'set_max_area' constraint. (SDC-4)
+Information: Ignored 1 unsupported 'set_wire_load_model' constraint. (SDC-4)
+Information: Ignored 1 unsupported 'set_wire_load_selection_group' constraint. (SDC-4)
+1
+icc2_shell> set_clock_uncertainty 0.2 [all_clocks]
+1
+icc2_shell> remove_propagated_clock [all_clocks]
+1
+icc2_shell> check_timing
+Total messages: 0, Errors: 0, Warnings: 0, Info: 0
+
+1
+1
+1
+icc2_shell> start gui
+Error: ambiguous command 'start' matched 2 commands:
+        (start_busplan_gui, start_gui) (CMD-006)
+icc2_shell> start_gui
+icc2_shell> initialize_floorplan -boundary {{0 0}{800 800}}
+Error: Invalid coordinate list '{0 0}{800 800}'; list must be of the form { { x y } ... }. (NDMUI-101)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {{ 0 0 }{ 800 800 }}
+Error: Invalid coordinate list '{ 0 0 }{ 800 800 }'; list must be of the form { { x y } ... }. (NDMUI-101)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {{0 0}{800 800}}
+Error: Invalid coordinate list '{0 0}{800 800}'; list must be of the form { { x y } ... }. (NDMUI-101)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {list{0 0}{800 800}}
+Error: Invalid coordinates 'list{0' in list. (NDMUI-100)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {{{0 0}{800 800}}}
+Error: Invalid float value '0 0' in list. (CMD-014)
+Error: Invalid float value '800 800' in list. (CMD-014)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {{{0;0}{800;800}}}
+Error: Invalid float value '0;0' in list. (CMD-014)
+Error: Invalid float value '800;800' in list. (CMD-014)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -boundary {0 0 800 800}
+Error: Invalid coordinates '0' in list. (NDMUI-100)
+Error: bad value specified for option -boundary
+        Use error_info for more info. (CMD-013)
+icc2_shell> initialize_floorplan -side_length  {800 600}
+Error: Following set of licenses does not exist on server :  ICCompilerII-4 ICCompilerII-8 ICCompilerII-NX. Combination of 'ICCompilerII + ICCompilerII-4' or 'ICCompilerII-8 + ICCompilerII-NX' keys must exist. (SEC-72)
+Error: License checkout unsuccessful. Command 'initialize_floorplan' cannot run. (SEC-71)
+icc2_shell> initialize_floorplan -side_ratio {100 200}
+Error: Following set of licenses does not exist on server :  ICCompilerII-4 ICCompilerII-8 ICCompilerII-NX. Combination of 'ICCompilerII + ICCompilerII-4' or 'ICCompilerII-8 + ICCompilerII-NX' keys must exist. (SEC-72)
+Error: License checkout unsuccessful. Command 'initialize_floorplan' cannot run. (SEC-71)
+icc2_shell> initialize_floorplan -side_ratio {100 200}
+Error: Following set of licenses does not exist on server :  ICCompilerII-4 ICCompilerII-8 ICCompilerII-NX. Combination of 'ICCompilerII + ICCompilerII-4' or 'ICCompilerII-8 + ICCompilerII-NX' keys must exist. (SEC-72)
+Error: License checkout unsuccessful. Command 'initialize_floorplan' cannot run. (SEC-71)
+icc2_shell> exxit
+Error: unknown command 'exxit' (CMD-005)
+icc2_shell> eixt
+Error: unknown command 'eixt' (CMD-005)
+icc2_shell> exit
+Maximum memory usage for this session: 220.96 MB
+CPU usage for this session:    231 seconds (  0.06 hours)
+Elapsed time for this session: 597049 seconds (165.85 hours)
+Thank you for using IC Compiler II.
+

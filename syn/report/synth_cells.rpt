@@ -1,0 +1,658 @@
+ 
+****************************************
+Report : cell
+Design : Multiplier_top_p
+Version: O-2018.06-SP1
+Date   : Tue Dec  3 19:52:28 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+Carry_r_reg[0]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[1]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[2]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[3]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[4]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[5]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[6]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[7]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[8]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[9]            DFFHQXL         typical         53.222401 n
+Carry_r_reg[10]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[11]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[12]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[13]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[14]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[15]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[16]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[17]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[18]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[19]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[20]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[21]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[22]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[23]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[24]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[25]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[26]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[27]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[28]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[29]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[30]           DFFHQXL         typical         53.222401 n
+Carry_r_reg[31]           DFFHQXL         typical         53.222401 n
+PP0_r_reg[0]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[1]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[2]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[3]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[4]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[5]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[6]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[7]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[8]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[9]              DFFHQXL         typical         53.222401 n
+PP0_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP0_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[2]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[3]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[4]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[5]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[6]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[7]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[8]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[9]              DFFHQXL         typical         53.222401 n
+PP1_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP1_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[4]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[5]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[6]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[7]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[8]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[9]              DFFHQXL         typical         53.222401 n
+PP2_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP2_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[6]              DFFHQXL         typical         53.222401 n
+PP3_r_reg[7]              DFFHQXL         typical         53.222401 n
+PP3_r_reg[8]              DFFHQXL         typical         53.222401 n
+PP3_r_reg[9]              DFFHQXL         typical         53.222401 n
+PP3_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[22]             DFFHQXL         typical         53.222401 n
+PP3_r_reg[23]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[8]              DFFHQXL         typical         53.222401 n
+PP4_r_reg[9]              DFFHQXL         typical         53.222401 n
+PP4_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[22]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[23]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[24]             DFFHQXL         typical         53.222401 n
+PP4_r_reg[25]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[10]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[11]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[22]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[23]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[24]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[25]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[26]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[27]             DFFHQXL         typical         53.222401 n
+PP5_r_reg[28]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[12]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[13]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[22]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[23]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[24]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[25]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[26]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[27]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[28]             DFFHQXL         typical         53.222401 n
+PP6_r_reg[29]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[14]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[15]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[16]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[17]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[18]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[19]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[20]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[21]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[22]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[23]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[24]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[25]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[26]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[27]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[28]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[29]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[30]             DFFHQXL         typical         53.222401 n
+PP7_r_reg[31]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[2]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[3]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[4]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[5]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[6]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[7]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[8]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[9]              DFFHQXL         typical         53.222401 n
+Sum_r_reg[10]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[11]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[12]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[13]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[14]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[15]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[16]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[17]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[18]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[19]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[20]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[21]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[22]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[23]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[24]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[25]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[26]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[27]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[28]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[29]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[30]             DFFHQXL         typical         53.222401 n
+Sum_r_reg[31]             DFFHQXL         typical         53.222401 n
+U324                      INVX1           typical         6.652800  
+U325                      AND2X1          typical         13.305600 
+U326                      AND2X1          typical         13.305600 
+U327                      AND2X1          typical         13.305600 
+U328                      AND2X1          typical         13.305600 
+U329                      AND2X1          typical         13.305600 
+U330                      AND2X1          typical         13.305600 
+U331                      AND2X1          typical         13.305600 
+U332                      AND2X1          typical         13.305600 
+U333                      AND2X1          typical         13.305600 
+U334                      AND2X1          typical         13.305600 
+U335                      AND2X1          typical         13.305600 
+U336                      AND2X1          typical         13.305600 
+U337                      AND2X1          typical         13.305600 
+U338                      AND2X1          typical         13.305600 
+U339                      AND2X1          typical         13.305600 
+U340                      AND2X1          typical         13.305600 
+U341                      AND2X1          typical         13.305600 
+U342                      AND2X1          typical         13.305600 
+U343                      AND2X1          typical         13.305600 
+U344                      AND2X1          typical         13.305600 
+U345                      AND2X1          typical         13.305600 
+U346                      AND2X1          typical         13.305600 
+U347                      AND2X1          typical         13.305600 
+U348                      AND2X1          typical         13.305600 
+U349                      AND2X1          typical         13.305600 
+U350                      AND2X1          typical         13.305600 
+U351                      AND2X1          typical         13.305600 
+U352                      AND2X1          typical         13.305600 
+U353                      AND2X1          typical         13.305600 
+U354                      AND2X1          typical         13.305600 
+U355                      AND2X1          typical         13.305600 
+U356                      AND2X1          typical         13.305600 
+U357                      AND2X1          typical         13.305600 
+U358                      AND2X1          typical         13.305600 
+U359                      INVX1           typical         6.652800  
+U360                      INVX1           typical         6.652800  
+U361                      INVX1           typical         6.652800  
+U362                      AND2XL          typical         13.305600 
+U363                      AND2XL          typical         13.305600 
+U364                      AND2XL          typical         13.305600 
+U365                      AND2XL          typical         13.305600 
+U366                      AND2XL          typical         13.305600 
+U367                      AND2XL          typical         13.305600 
+U368                      AND2XL          typical         13.305600 
+U369                      AND2XL          typical         13.305600 
+U370                      AND2XL          typical         13.305600 
+U371                      AND2XL          typical         13.305600 
+U372                      AND2XL          typical         13.305600 
+U373                      AND2XL          typical         13.305600 
+U374                      AND2XL          typical         13.305600 
+U375                      AND2XL          typical         13.305600 
+U376                      AND2XL          typical         13.305600 
+U377                      AND2XL          typical         13.305600 
+U378                      INVX1           typical         6.652800  
+U379                      INVX1           typical         6.652800  
+U380                      INVX1           typical         6.652800  
+U381                      INVX1           typical         6.652800  
+U382                      INVX1           typical         6.652800  
+U383                      INVX1           typical         6.652800  
+U384                      INVX1           typical         6.652800  
+U385                      INVX1           typical         6.652800  
+U386                      INVX1           typical         6.652800  
+U387                      INVX1           typical         6.652800  
+U388                      INVX1           typical         6.652800  
+U389                      INVX1           typical         6.652800  
+U390                      INVX1           typical         6.652800  
+U391                      INVX1           typical         6.652800  
+U392                      INVX1           typical         6.652800  
+U393                      INVX1           typical         6.652800  
+U394                      INVX1           typical         6.652800  
+U395                      INVX1           typical         6.652800  
+U396                      INVX1           typical         6.652800  
+U397                      INVX1           typical         6.652800  
+U398                      INVX1           typical         6.652800  
+U399                      INVX1           typical         6.652800  
+U400                      INVX1           typical         6.652800  
+U401                      INVX1           typical         6.652800  
+U402                      INVXL           typical         6.652800  
+U403                      INVXL           typical         6.652800  
+U404                      INVXL           typical         6.652800  
+U405                      INVXL           typical         6.652800  
+U406                      INVXL           typical         6.652800  
+U407                      INVXL           typical         6.652800  
+U408                      INVXL           typical         6.652800  
+U409                      INVXL           typical         6.652800  
+U410                      INVXL           typical         6.652800  
+U411                      INVXL           typical         6.652800  
+U412                      INVXL           typical         6.652800  
+U413                      INVXL           typical         6.652800  
+U414                      INVXL           typical         6.652800  
+U415                      INVXL           typical         6.652800  
+U416                      INVXL           typical         6.652800  
+U417                      INVXL           typical         6.652800  
+U418                      INVXL           typical         6.652800  
+U419                      INVXL           typical         6.652800  
+U420                      INVXL           typical         6.652800  
+U421                      INVXL           typical         6.652800  
+U422                      INVXL           typical         6.652800  
+U423                      INVXL           typical         6.652800  
+U424                      INVXL           typical         6.652800  
+U425                      INVXL           typical         6.652800  
+U426                      INVXL           typical         6.652800  
+U427                      INVXL           typical         6.652800  
+U428                      INVXL           typical         6.652800  
+U429                      INVXL           typical         6.652800  
+U430                      INVXL           typical         6.652800  
+U431                      INVXL           typical         6.652800  
+U432                      INVXL           typical         6.652800  
+U433                      INVXL           typical         6.652800  
+U434                      INVXL           typical         6.652800  
+U435                      INVXL           typical         6.652800  
+U436                      INVXL           typical         6.652800  
+U437                      INVXL           typical         6.652800  
+U438                      INVXL           typical         6.652800  
+U439                      INVXL           typical         6.652800  
+U440                      INVXL           typical         6.652800  
+U441                      INVXL           typical         6.652800  
+U442                      INVXL           typical         6.652800  
+U443                      INVXL           typical         6.652800  
+U444                      INVXL           typical         6.652800  
+U445                      INVXL           typical         6.652800  
+U446                      INVXL           typical         6.652800  
+U447                      INVXL           typical         6.652800  
+U448                      INVXL           typical         6.652800  
+U449                      INVXL           typical         6.652800  
+U450                      INVXL           typical         6.652800  
+U451                      INVXL           typical         6.652800  
+U452                      INVXL           typical         6.652800  
+U453                      INVXL           typical         6.652800  
+U454                      INVXL           typical         6.652800  
+U455                      INVXL           typical         6.652800  
+U456                      INVXL           typical         6.652800  
+U457                      INVXL           typical         6.652800  
+U458                      INVXL           typical         6.652800  
+U459                      INVXL           typical         6.652800  
+U460                      INVXL           typical         6.652800  
+U461                      INVXL           typical         6.652800  
+U462                      INVXL           typical         6.652800  
+U463                      INVXL           typical         6.652800  
+U464                      INVXL           typical         6.652800  
+U465                      INVXL           typical         6.652800  
+U466                      INVXL           typical         6.652800  
+U467                      INVXL           typical         6.652800  
+U468                      INVXL           typical         6.652800  
+U469                      INVXL           typical         6.652800  
+U470                      INVXL           typical         6.652800  
+U471                      AND2XL          typical         13.305600 
+U472                      AND2XL          typical         13.305600 
+U473                      AND2XL          typical         13.305600 
+U474                      AND2XL          typical         13.305600 
+U475                      AND2XL          typical         13.305600 
+U476                      AND2XL          typical         13.305600 
+U477                      AND2XL          typical         13.305600 
+U478                      AND2XL          typical         13.305600 
+U479                      AND2XL          typical         13.305600 
+U480                      AND2XL          typical         13.305600 
+U481                      AND2XL          typical         13.305600 
+U482                      AND2XL          typical         13.305600 
+U483                      AND2XL          typical         13.305600 
+U484                      AND2XL          typical         13.305600 
+U485                      AND2XL          typical         13.305600 
+U486                      AND2XL          typical         13.305600 
+U487                      AND2XL          typical         13.305600 
+U488                      AND2XL          typical         13.305600 
+U489                      AND2XL          typical         13.305600 
+U490                      AND2XL          typical         13.305600 
+U491                      AND2XL          typical         13.305600 
+U492                      AND2XL          typical         13.305600 
+U493                      AND2XL          typical         13.305600 
+U494                      AND2XL          typical         13.305600 
+U495                      AND2XL          typical         13.305600 
+U496                      AND2XL          typical         13.305600 
+U497                      AND2XL          typical         13.305600 
+U498                      AND2XL          typical         13.305600 
+U499                      AND2XL          typical         13.305600 
+U500                      AND2XL          typical         13.305600 
+U501                      AND2XL          typical         13.305600 
+U502                      AND2XL          typical         13.305600 
+U503                      AND2XL          typical         13.305600 
+U504                      AND2XL          typical         13.305600 
+U505                      AND2XL          typical         13.305600 
+U506                      AND2XL          typical         13.305600 
+U507                      AND2XL          typical         13.305600 
+U508                      AND2XL          typical         13.305600 
+U509                      AND2XL          typical         13.305600 
+U510                      AND2XL          typical         13.305600 
+U511                      AND2XL          typical         13.305600 
+U512                      AND2XL          typical         13.305600 
+U513                      AND2XL          typical         13.305600 
+U514                      AND2XL          typical         13.305600 
+U515                      AND2XL          typical         13.305600 
+U516                      AND2XL          typical         13.305600 
+U517                      AND2XL          typical         13.305600 
+U518                      AND2XL          typical         13.305600 
+U519                      AND2XL          typical         13.305600 
+U520                      AND2XL          typical         13.305600 
+U521                      AND2XL          typical         13.305600 
+U522                      INVXL           typical         6.652800  
+U523                      AND2XL          typical         13.305600 
+U524                      AND2XL          typical         13.305600 
+U525                      AND2XL          typical         13.305600 
+U526                      AND2XL          typical         13.305600 
+U527                      AND2XL          typical         13.305600 
+U528                      AND2XL          typical         13.305600 
+U529                      AND2XL          typical         13.305600 
+U530                      AND2XL          typical         13.305600 
+U531                      AND2XL          typical         13.305600 
+U532                      AND2XL          typical         13.305600 
+U533                      AND2XL          typical         13.305600 
+U534                      INVXL           typical         6.652800  
+U535                      INVXL           typical         6.652800  
+U536                      INVXL           typical         6.652800  
+U537                      INVXL           typical         6.652800  
+U538                      INVXL           typical         6.652800  
+U539                      INVXL           typical         6.652800  
+U540                      BUFX1           typical         13.305600 
+U541                      BUFX1           typical         13.305600 
+U542                      AND2XL          typical         13.305600 
+U543                      AND2XL          typical         13.305600 
+U544                      AND2XL          typical         13.305600 
+U545                      AND2XL          typical         13.305600 
+U546                      AND2XL          typical         13.305600 
+U547                      AND2XL          typical         13.305600 
+U548                      INVXL           typical         6.652800  
+U549                      AND2XL          typical         13.305600 
+U550                      AND2XL          typical         13.305600 
+U551                      AND2XL          typical         13.305600 
+U552                      INVXL           typical         6.652800  
+U553                      INVXL           typical         6.652800  
+U554                      AND2XL          typical         13.305600 
+U555                      INVXL           typical         6.652800  
+U556                      AND2XL          typical         13.305600 
+U557                      AND2XL          typical         13.305600 
+U558                      AND2XL          typical         13.305600 
+U559                      INVXL           typical         6.652800  
+U560                      INVXL           typical         6.652800  
+U561                      AND2XL          typical         13.305600 
+U562                      INVXL           typical         6.652800  
+U563                      INVXL           typical         6.652800  
+U564                      AND2XL          typical         13.305600 
+U565                      INVXL           typical         6.652800  
+U566                      AND2XL          typical         13.305600 
+U567                      INVXL           typical         6.652800  
+U568                      INVXL           typical         6.652800  
+U569                      AND2XL          typical         13.305600 
+U570                      INVXL           typical         6.652800  
+U571                      INVXL           typical         6.652800  
+U572                      AND2XL          typical         13.305600 
+U573                      INVXL           typical         6.652800  
+U574                      INVXL           typical         6.652800  
+U575                      AND2XL          typical         13.305600 
+U576                      AND2XL          typical         13.305600 
+U577                      INVXL           typical         6.652800  
+U578                      INVXL           typical         6.652800  
+U579                      AND2XL          typical         13.305600 
+U580                      AND2XL          typical         13.305600 
+U581                      AND2XL          typical         13.305600 
+U582                      AND2XL          typical         13.305600 
+U583                      INVXL           typical         6.652800  
+U584                      INVXL           typical         6.652800  
+U585                      AND2XL          typical         13.305600 
+U586                      AND2XL          typical         13.305600 
+U587                      INVXL           typical         6.652800  
+U588                      AND2XL          typical         13.305600 
+U589                      INVXL           typical         6.652800  
+U590                      INVXL           typical         6.652800  
+U591                      AND2XL          typical         13.305600 
+U592                      INVXL           typical         6.652800  
+U593                      AND2XL          typical         13.305600 
+U594                      AND2XL          typical         13.305600 
+U595                      INVXL           typical         6.652800  
+U596                      INVXL           typical         6.652800  
+U597                      AND2XL          typical         13.305600 
+U598                      INVXL           typical         6.652800  
+U599                      AND2XL          typical         13.305600 
+U600                      INVXL           typical         6.652800  
+U601                      AND2XL          typical         13.305600 
+U602                      AND2XL          typical         13.305600 
+U603                      AND2XL          typical         13.305600 
+U604                      INVXL           typical         6.652800  
+U605                      INVXL           typical         6.652800  
+U606                      AND2XL          typical         13.305600 
+U607                      INVXL           typical         6.652800  
+U608                      INVXL           typical         6.652800  
+U609                      AND2XL          typical         13.305600 
+U610                      INVXL           typical         6.652800  
+U611                      AND2XL          typical         13.305600 
+U612                      INVXL           typical         6.652800  
+U613                      AND2XL          typical         13.305600 
+U614                      AND2XL          typical         13.305600 
+U615                      AND2XL          typical         13.305600 
+U616                      INVXL           typical         6.652800  
+U617                      AND2XL          typical         13.305600 
+U618                      AND2XL          typical         13.305600 
+U619                      AND2XL          typical         13.305600 
+U620                      AND2XL          typical         13.305600 
+U621                      INVXL           typical         6.652800  
+U622                      INVXL           typical         6.652800  
+U623                      AND2XL          typical         13.305600 
+U624                      INVXL           typical         6.652800  
+U625                      AND2XL          typical         13.305600 
+U626                      AND2XL          typical         13.305600 
+U627                      AND2XL          typical         13.305600 
+U628                      AND2XL          typical         13.305600 
+U629                      INVXL           typical         6.652800  
+U630                      AND2XL          typical         13.305600 
+U631                      INVXL           typical         6.652800  
+U632                      INVXL           typical         6.652800  
+U633                      AND2XL          typical         13.305600 
+U634                      INVXL           typical         6.652800  
+U635                      INVXL           typical         6.652800  
+U636                      AND2XL          typical         13.305600 
+U637                      AND2XL          typical         13.305600 
+U638                      AND2XL          typical         13.305600 
+U639                      INVXL           typical         6.652800  
+U640                      AND2XL          typical         13.305600 
+U641                      INVXL           typical         6.652800  
+U642                      AND2XL          typical         13.305600 
+U643                      AND2XL          typical         13.305600 
+U644                      INVXL           typical         6.652800  
+U645                      AND2XL          typical         13.305600 
+U646                      INVXL           typical         6.652800  
+U647                      AND2XL          typical         13.305600 
+U648                      AND2XL          typical         13.305600 
+U649                      AND2XL          typical         13.305600 
+U650                      AND2XL          typical         13.305600 
+U651                      AND2XL          typical         13.305600 
+U652                      INVXL           typical         6.652800  
+U653                      INVXL           typical         6.652800  
+U654                      AND2XL          typical         13.305600 
+U655                      AND2XL          typical         13.305600 
+U656                      INVXL           typical         6.652800  
+U657                      INVXL           typical         6.652800  
+U658                      AND2XL          typical         13.305600 
+U659                      INVXL           typical         6.652800  
+U660                      INVXL           typical         6.652800  
+U661                      AND2XL          typical         13.305600 
+U662                      INVXL           typical         6.652800  
+U663                      INVXL           typical         6.652800  
+U664                      AND2XL          typical         13.305600 
+U665                      INVXL           typical         6.652800  
+U666                      INVXL           typical         6.652800  
+U667                      AND2XL          typical         13.305600 
+U668                      INVXL           typical         6.652800  
+U669                      INVXL           typical         6.652800  
+U670                      AND2XL          typical         13.305600 
+U671                      INVXL           typical         6.652800  
+U672                      AND2XL          typical         13.305600 
+U673                      INVXL           typical         6.652800  
+U674                      INVXL           typical         6.652800  
+U675                      AND2XL          typical         13.305600 
+U676                      AND2XL          typical         13.305600 
+U677                      AND2XL          typical         13.305600 
+U678                      AND2XL          typical         13.305600 
+U679                      AND2XL          typical         13.305600 
+U680                      AND2XL          typical         13.305600 
+U681                      AND2XL          typical         13.305600 
+U682                      AND2XL          typical         13.305600 
+U683                      AND2XL          typical         13.305600 
+U684                      AND2XL          typical         13.305600 
+U685                      AND2XL          typical         13.305600 
+U686                      AND2XL          typical         13.305600 
+U687                      AND2XL          typical         13.305600 
+U688                      AND2XL          typical         13.305600 
+U689                      INVXL           typical         6.652800  
+U690                      INVXL           typical         6.652800  
+U691                      AND2XL          typical         13.305600 
+U692                      INVXL           typical         6.652800  
+U693                      AND2XL          typical         13.305600 
+U694                      INVXL           typical         6.652800  
+U695                      INVXL           typical         6.652800  
+U696                      AND2XL          typical         13.305600 
+U697                      INVXL           typical         6.652800  
+U698                      INVXL           typical         6.652800  
+U699                      INVXL           typical         6.652800  
+U700                      AND2XL          typical         13.305600 
+U701                      INVXL           typical         6.652800  
+U702                      AND2XL          typical         13.305600 
+U703                      INVXL           typical         6.652800  
+U704                      AND2XL          typical         13.305600 
+U705                      INVXL           typical         6.652800  
+U706                      INVXL           typical         6.652800  
+U707                      AND2XL          typical         13.305600 
+U708                      AND2XL          typical         13.305600 
+U709                      AND2XL          typical         13.305600 
+U710                      AND2XL          typical         13.305600 
+U711                      INVXL           typical         6.652800  
+U712                      INVXL           typical         6.652800  
+U713                      INVXL           typical         6.652800  
+U714                      INVXL           typical         6.652800  
+U715                      INVXL           typical         6.652800  
+U716                      INVXL           typical         6.652800  
+U717                      INVXL           typical         6.652800  
+U718                      INVXL           typical         6.652800  
+U719                      INVXL           typical         6.652800  
+U720                      INVXL           typical         6.652800  
+U721                      INVXL           typical         6.652800  
+U722                      INVXL           typical         6.652800  
+U723                      INVXL           typical         6.652800  
+U724                      INVXL           typical         6.652800  
+U725                      INVXL           typical         6.652800  
+U726                      INVXL           typical         6.652800  
+U727                      INVXL           typical         6.652800  
+U728                      INVXL           typical         6.652800  
+U729                      INVXL           typical         6.652800  
+U730                      INVXL           typical         6.652800  
+U731                      INVXL           typical         6.652800  
+U732                      INVXL           typical         6.652800  
+U733                      INVXL           typical         6.652800  
+U734                      INVXL           typical         6.652800  
+U735                      INVXL           typical         6.652800  
+U736                      INVXL           typical         6.652800  
+U737                      INVXL           typical         6.652800  
+U738                      INVXL           typical         6.652800  
+U739                      INVXL           typical         6.652800  
+U740                      INVXL           typical         6.652800  
+U741                      INVXL           typical         6.652800  
+U742                      INVXL           typical         6.652800  
+U743                      INVXL           typical         6.652800  
+U744                      INVXL           typical         6.652800  
+U745                      INVXL           typical         6.652800  
+U746                      INVXL           typical         6.652800  
+u_PP_top                  PP_top                          19010.376253
+                                                                    h
+u_WallaceTree_top         WallaceTree_top                 10148.846492
+                                                                    h
+u_kas_top                 ksa_top                         9759.657715
+                                                                    h
+--------------------------------------------------------------------------------
+Total 635 cells                                           54253.584652
+1

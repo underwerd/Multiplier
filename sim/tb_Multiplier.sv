@@ -2,7 +2,7 @@
 
 // Testbench 模块，用于验证 signed_multiplier
 
-//`define DEBUG_PP
+`define DEBUG_PP
 
 module tb_Multiplier();
 
@@ -32,8 +32,8 @@ module tb_Multiplier();
     
     // 实例化 16-bit 有符号乘法器
     Multiplier_top_dft uut (
-        .Multiplicant(A),
-        .Multiplier(B),
+        .Multiplicant(B),
+        .Multiplier(A),
         .result(Product),
         .PP0  (PartialProduct[0]),
         .PP1  (PartialProduct[1]),

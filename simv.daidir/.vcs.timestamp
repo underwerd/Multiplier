@@ -1,6 +1,9 @@
-0 
-33
+2        
+0 ../syn/output/Multiplier_top_p.sdf
+0 ../syn/output/Multiplier_top_p.sdf
+34
 +itf+/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
++nospecify
 +v2k
 +vc
 +vcsd1
@@ -123,16 +126,11 @@ CDSHOME=/home/cadence/IC617
 CALIBRE_HOME=/home/mentor//Calibre2015/aoi_cal_2015.2_36.27
 CADHOME=/home/cadence
 0
-11
-1732180581 ./sim/tb_Multiplier.sv
-1732089955 ./src/WallaceTree_top.v
-1732073393 ./src/PPUnit.v
-1732080178 ./src/PP_top.v
-1732179438 ./src/Multiplier_top_dft.v
-1732070777 ./src/Multiplier_top.v
-1732070777 ./src/CLA32.v
-1732070777 ./src/BoothEndecode.v
-1732179788 filelist.f
+6
+1733214331 ./sim/tb_Multiplier_p.sv
+1733156631 ./syn/output/Multiplier_top_p.v
+1082449294 /home/ICer/../ic_libs/TSMC_013/verilog/tsmc13.v
+1733155533 filelist.f
 1550753332 /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
 1539400757 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
 4
@@ -140,5 +138,5 @@ CADHOME=/home/cadence
 1539401183 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/liberrorinf.so
 1539401125 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libsnpsmalloc.so
 1539401175 /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvfs.so
-1732180589 simv.daidir
+1733214350 simv.daidir
 -1 partitionlib

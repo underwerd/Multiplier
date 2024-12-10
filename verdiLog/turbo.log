@@ -1,3 +1,3 @@
-Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -f filelist.f -ssf tb_Multiplier.fsdb
+Command Line: /home/synopsys/verdi/Verdi_O-2018.09-SP2/platform/LINUXAMD64/bin/Novas -f filelist.f -ssf tb_Multiplier_p.fsdb
 uname(Linux IC_EDA 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64)
-au time 1603.445870 29.097183 9.540989 delta 1131319296 1131319296 total 1556402176 1556402176
+au time 143.925591 7.421021 1.990044 delta 633548800 633548800 total 1058635776 1058635776

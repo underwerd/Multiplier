@@ -111,45 +111,47 @@ ANF: vhdi_node_ist_add_scsd_callback('simv: undefined symbol: vhdi_node_ist_add_
 ANF: vhdi_node_ist_get_value_addr('simv: undefined symbol: vhdi_node_ist_get_value_addr')
 VCS compile option:
  option[0]: simv
- option[1]: +vc
- option[2]: +v2k
- option[3]: /home/synopsys/vcs-mx/O-2018.09-1/linux64/bin/vcs1
- option[4]: -Mcc=gcc
- option[5]: -Mcplusplus=g++
- option[6]: -Masflags=
- option[7]: -Mcfl= -pipe -fPIC -O -I/home/synopsys/vcs-mx/O-2018.09-1/include 
- option[8]: -Mxcflags= -pipe -fPIC -I/home/synopsys/vcs-mx/O-2018.09-1/include
- option[9]: -Mldflags= -rdynamic 
- option[10]: -Mout=simv
- option[11]: -Mamsrun=
- option[12]: -Mvcsaceobjs=
- option[13]: -Mobjects= /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvirsim.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/liberrorinf.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libsnpsmalloc.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvfs.so 
- option[14]: -Mexternalobj=
- option[15]: -Msaverestoreobj=/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_save_restore_new.o
- option[16]: -Mcrt0=
- option[17]: -Mcrtn=
- option[18]: -Mcsrc=
- option[19]: -Msyslibs=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -ldl 
- option[20]: -Xvcs_run_simv=1
- option[21]: -timescale=1ns/1ps
- option[22]: -full64
- option[23]: +vc
- option[24]: +v2k
- option[25]: -debug_access+all
- option[26]: +vpi
- option[27]: +vcsd1
- option[28]: +itf+/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
- option[29]: -picarchive
- option[30]: -P
- option[31]: /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
- option[32]: -fsdb
- option[33]: -sverilog
- option[34]: -gen_obj
- option[35]: -f
- option[36]: filelist.f
- option[37]: -load
- option[38]: /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
- option[39]: timescale=1ns/1ps
+ option[1]: +nospecify
+ option[2]: +vc
+ option[3]: +v2k
+ option[4]: /home/synopsys/vcs-mx/O-2018.09-1/linux64/bin/vcs1
+ option[5]: -Mcc=gcc
+ option[6]: -Mcplusplus=g++
+ option[7]: -Masflags=
+ option[8]: -Mcfl= -pipe -fPIC -O -I/home/synopsys/vcs-mx/O-2018.09-1/include 
+ option[9]: -Mxcflags= -pipe -fPIC -I/home/synopsys/vcs-mx/O-2018.09-1/include
+ option[10]: -Mldflags= -rdynamic 
+ option[11]: -Mout=simv
+ option[12]: -Mamsrun=
+ option[13]: -Mvcsaceobjs=
+ option[14]: -Mobjects= /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvirsim.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/liberrorinf.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libsnpsmalloc.so /home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/libvfs.so 
+ option[15]: -Mexternalobj=
+ option[16]: -Msaverestoreobj=/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcs_save_restore_new.o
+ option[17]: -Mcrt0=
+ option[18]: -Mcrtn=
+ option[19]: -Mcsrc=
+ option[20]: -Msyslibs=/home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/pli.a -ldl 
+ option[21]: -Xvcs_run_simv=1
+ option[22]: +nospecify
+ option[23]: -timescale=1ns/1ps
+ option[24]: -full64
+ option[25]: +vc
+ option[26]: +v2k
+ option[27]: -debug_access+all
+ option[28]: +vpi
+ option[29]: +vcsd1
+ option[30]: +itf+/home/synopsys/vcs-mx/O-2018.09-1/linux64/lib/vcsdp_lite.tab
+ option[31]: -picarchive
+ option[32]: -P
+ option[33]: /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/verdi.tab
+ option[34]: -fsdb
+ option[35]: -sverilog
+ option[36]: -gen_obj
+ option[37]: -f
+ option[38]: filelist.f
+ option[39]: -load
+ option[40]: /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/VCS/LINUX64/libnovas.so:FSDBDumpCmd
+ option[41]: timescale=1ns/1ps
 Chronologic Simulation VCS Release O-2018.09-1_Full64
 Linux 3.10.0-1160.53.1.el7.x86_64 #1 SMP Fri Jan 14 13:59:45 UTC 2022 x86_64
 CPU cores: 8
@@ -237,7 +239,7 @@ QEMU_HOME=/home/Riscv_Tools/riscv-gnu-toolchain/qemu-6.0.0
 HISTCONTROL=ignoredups
 SPECMAN_HOME=/home/cadence/INCISIVE152/components/sn
 VCS_ARG_ADDED_FOR_TMP=1
-SNPS_VCS_TMPDIR=/tmp/vcs_20241121091628_108388
+SNPS_VCS_TMPDIR=/tmp/vcs_20241203082546_46006
 HOME=/home/ICer
 XDG_SEAT=seat0
 RISCV=/home/Riscv_Tools
@@ -284,62 +286,63 @@ DVE=/home/synopsys/vcs-mx/O-2018.09-1/gui/dve
 SPECMAN_OUTPUT_TO_TTY=1
 Runtime command line arguments:
 argv[0]=simv
-argv[1]=+vc
-argv[2]=+v2k
-288 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.100 user,  245.61M mem
-289 Thu Nov 21 17:16:29 2024
-290 pliAppInit
-291 FSDB_GATE is set.
-292 FSDB_RTL is set.
-293 Enable Parallel Dumping.
-294 pliAppMiscSet: New Sim Round
-295 pliEntryInit
-296 LIBSSCORE=found /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/lib/LINUXAMD64/libsscore_vcs201809.so through $NOVAS_HOME setting.
-297 FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
-298 (C) 1996 - 2019 by Synopsys, Inc.
-299 sps_call_fsdbDumpfile_main at 0 : ./sim/tb_Multiplier.sv(131)
-300 argv[0]: (tb_Multiplier_dft.fsdb)
-301 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
-302 *Verdi* : Create FSDB file 'tb_Multiplier_dft.fsdb'
-303 compile option from '/home/ICer/ic_prjs/multiplier/simv.daidir/vcs_rebuild'.
-304   "vcs '-f' 'filelist.f' '-timescale=1ns/1ps' '-full64' '-R' '+vc' '+v2k' '-sverilog' '-debug_access+all' 2>&1"
-305 FSDB_VCS_ENABLE_FAST_VC is enable
-306 sps_call_fsdbDumpvars_vd_main at 0 : ./sim/tb_Multiplier.sv(132)
-307 [spi_vcs_vd_ppi_create_root]: no upf option
-308 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
-309 *Verdi* : Begin traversing the scopes, layer (0).
-310 *Verdi* : End of traversing.
-311 pliAppHDL_DumpVarComplete traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.110 user,  342.12M mem
-                   incr: 0.000 sys,  0.000 user,  8.98M mem
-                   accu: 0.000 sys,  0.000 user,  8.98M mem
-              accu incr: 0.000 sys,  0.000 user,  8.98M mem
+argv[1]=+nospecify
+argv[2]=+vc
+argv[3]=+v2k
+291 profile - 100
+          CPU/Mem usage: 0.040 sys,  0.120 user,  252.49M mem
+292 Tue Dec  3 16:25:49 2024
+293 pliAppInit
+294 FSDB_GATE is set.
+295 FSDB_RTL is set.
+296 Enable Parallel Dumping.
+297 pliAppMiscSet: New Sim Round
+298 pliEntryInit
+299 LIBSSCORE=found /home/synopsys/verdi/Verdi_O-2018.09-SP2/share/PLI/lib/LINUXAMD64/libsscore_vcs201809.so through $NOVAS_HOME setting.
+300 FSDB Dumper for VCS, Release Verdi_O-2018.09-SP2, Linux x86_64/64bit, 02/21/2019
+301 (C) 1996 - 2019 by Synopsys, Inc.
+302 sps_call_fsdbDumpfile_main at 0 : ./sim/tb_Multiplier_p.sv(127)
+303 argv[0]: (tb_Multiplier_p.fsdb)
+304 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+305 *Verdi* : Create FSDB file 'tb_Multiplier_p.fsdb'
+306 compile option from '/home/ICer/ic_prjs/multiplier/simv.daidir/vcs_rebuild'.
+307   "vcs '+nospecify' '-f' 'filelist.f' '-timescale=1ns/1ps' '-full64' '-R' '+vc' '+v2k' '-sverilog' '-debug_access+all' 2>&1"
+308 FSDB_VCS_ENABLE_FAST_VC is enable
+309 sps_call_fsdbDumpvars_vd_main at 0 : ./sim/tb_Multiplier_p.sv(128)
+310 [spi_vcs_vd_ppi_create_root]: no upf option
+311 FSDB dumper cannot dump UPF related power signal ($power_tree): no ppiPowerNetwork.
+312 *Verdi* : Begin traversing the scopes, layer (0).
+313 *Verdi* : End of traversing.
+314 pliAppHDL_DumpVarComplete traverse var: profile - 
+          CPU/Mem usage: 0.060 sys,  0.160 user,  365.29M mem
+                   incr: 0.010 sys,  0.030 user,  8.01M mem
+                   accu: 0.010 sys,  0.030 user,  8.01M mem
+              accu incr: 0.010 sys,  0.030 user,  8.01M mem
 
-          Count usage: 1541 var,  1204 idcode,  357 callback
-                 incr: 1541 var,  1204 idcode,  357 callback
-                 accu: 1541 var,  1204 idcode,  357 callback
-            accu incr: 1541 var,  1204 idcode,  357 callback
-312 Thu Nov 21 17:16:29 2024
-313 pliAppHDL_DumpVarComplete: profile - 
-          CPU/Mem usage: 0.030 sys,  0.110 user,  343.18M mem
+          Count usage: 4985 var,  5035 idcode,  888 callback
+                 incr: 4985 var,  5035 idcode,  888 callback
+                 accu: 4985 var,  5035 idcode,  888 callback
+            accu incr: 4985 var,  5035 idcode,  888 callback
+315 Tue Dec  3 16:25:49 2024
+316 pliAppHDL_DumpVarComplete: profile - 
+          CPU/Mem usage: 0.060 sys,  0.160 user,  366.34M mem
                    incr: 0.000 sys,  0.000 user,  1.05M mem
-                   accu: 0.000 sys,  0.000 user,  10.04M mem
+                   accu: 0.010 sys,  0.030 user,  9.06M mem
               accu incr: 0.000 sys,  0.000 user,  1.05M mem
 
-          Count usage: 1541 var,  1204 idcode,  357 callback
+          Count usage: 4985 var,  5035 idcode,  888 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 1541 var,  1204 idcode,  357 callback
+                 accu: 4985 var,  5035 idcode,  888 callback
             accu incr: 0 var,  0 idcode,  0 callback
-314 Thu Nov 21 17:16:29 2024
-315 End of simulation at 10640000
-316 Thu Nov 21 17:16:29 2024
-317 Begin FSDB profile info:
-318 FSDB Writer : bc1(103093) bcn(98557) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.016102) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+317 Tue Dec  3 16:25:49 2024
+318 End of simulation at 100665000
+319 Tue Dec  3 16:25:50 2024
+320 Begin FSDB profile info:
+321 FSDB Writer : bc1(4501568) bcn(150721) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.254737) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
-319 End FSDB profile info
-320 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:1 BlockUsed:1
-321                        ProduceTime:0.227937671 ConsumerTime:0.003662600 Buffer:64MB
-322 SimExit
-323 Sim process exit
+322 End FSDB profile info
+323 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:22 BlockUsed:22
+324                        ProduceTime:1.353957425 ConsumerTime:0.126431939 Buffer:64MB
+325 SimExit
+326 Sim process exit

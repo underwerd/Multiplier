@@ -1,70 +1,87 @@
 debImport "-f" "filelist.f"
-debLoadSimResult /home/ICer/ic_prjs/multiplier/tb_Multiplier.fsdb
+debLoadSimResult /home/ICer/ic_prjs/multiplier/tb_Multiplier_p.fsdb
 wvCreateWindow
-wvRestoreSignal -win $_nWave2 "/home/ICer/ic_prjs/multiplier/signal.rc" \
-           -overWriteAutoAlias on -appendSignals on
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 0
-wvScrollDown -win $_nWave2 0
-wvScrollDown -win $_nWave2 0
-wvScrollDown -win $_nWave2 0
-wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
-wvSelectGroup -win $_nWave2 {G5}
-wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 2 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 4 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 3 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
-wvScrollDown -win $_nWave2 0
-wvScrollDown -win $_nWave2 0
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollUp -win $_nWave2 1
-wvSelectSignal -win $_nWave2 {( "G4" 5 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 6 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 8 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 6 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 5 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 4 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 3 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 2 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 1 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 1 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 3 )} 
-wvSelectSignal -win $_nWave2 {( "G4" 4 )} 
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 1
-wvSelectSignal -win $_nWave2 {( "G5" 1 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 2 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 3 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 4 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 5 )} 
-wvScrollDown -win $_nWave2 1
-wvScrollDown -win $_nWave2 0
-wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 7 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 8 )} 
-wvSelectSignal -win $_nWave2 {( "G5" 6 )} 
-wvScrollDown -win $_nWave2 0
-wvScrollDown -win $_nWave2 0
+srcHBSelect "tb_Multiplier" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_Multiplier" -delim "."
+srcHBSelect "tb_Multiplier" -win $_nTrace1
+srcHBSelect "tb_Multiplier.uut" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_Multiplier.uut" -delim "."
+srcHBSelect "tb_Multiplier.uut" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "clk" -line 2 -pos 1 -win $_nTrace1
+wvAddSignal -win $_nWave2 "/tb_Multiplier/uut/clk"
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PP0" -line 11 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvAddSignal -win $_nWave2 "/tb_Multiplier/uut/PP0\[31:0\]"
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "PP0_r" -line 20 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvAddSignal -win $_nWave2 "/tb_Multiplier/uut/PP0_r\[31:0\]"
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvZoom -win $_nWave2 56299.264615 250218.953846
+wvZoom -win $_nWave2 91145.141080 110596.777600
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+srcHBSelect "Multiplier_top_dft" -win $_nTrace1
+srcHBSelect "Multiplier_top_dft" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Multiplier_top_dft" -delim "."
+srcHBSelect "Multiplier_top_dft" -win $_nTrace1
+srcHBSelect "Multiplier_top_dft" -win $_nTrace1
+srcSetScope -win $_nTrace1 "Multiplier_top_dft" -delim "."
+srcHBSelect "Multiplier_top_dft" -win $_nTrace1
+srcHBSelect "tb_Multiplier" -win $_nTrace1
+srcHBSelect "tb_Multiplier" -win $_nTrace1
+srcSetScope -win $_nTrace1 "tb_Multiplier" -delim "."
+srcHBSelect "tb_Multiplier" -win $_nTrace1
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "Golden_p_d_2" -line 28 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvAddSignal -win $_nWave2 "/tb_Multiplier/Golden_p_d_2\[31:0\]"
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "Product" -line 43 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 0)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G1" 1)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G3" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "/tb_Multiplier/Product\[31:0\]"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave2 {( "G2" 1 )} 
+srcDeselectAll -win $_nTrace1
+srcSelect -signal "Golden_p_d_1" -line 27 -pos 1 -win $_nTrace1
+wvSetPosition -win $_nWave2 {("G1" 2)}
+wvSetPosition -win $_nWave2 {("G1" 3)}
+wvSetPosition -win $_nWave2 {("G2" 0)}
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvAddSignal -win $_nWave2 "/tb_Multiplier/Golden_p_d_1\[31:0\]"
+wvSetPosition -win $_nWave2 {("G2" 1)}
+wvSetPosition -win $_nWave2 {("G2" 2)}
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvZoomOut -win $_nWave2
+wvSaveSignal -win $_nWave2 "/home/ICer/ic_prjs/multiplier/signal.rc"
 debExit
